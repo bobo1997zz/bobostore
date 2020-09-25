@@ -1,0 +1,107 @@
+{
+  "id": "2099880",
+  "name": "网易严选",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "187815",
+      "name": "手机",
+      "font_class": "shouji",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "352124",
+      "name": "网易",
+      "font_class": "wangyi",
+      "unicode": "e67e",
+      "unicode_decimal": 59006
+    },
+    {
+      "icon_id": "520247",
+      "name": "退货",
+      "font_class": "tuihuo",
+      "unicode": "e69c",
+      "unicode_decimal": 59036
+    },
+    {
+      "icon_id": "1478445",
+      "name": "新浪",
+      "font_class": "xinlang",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "1802227",
+      "name": "微信",
+      "font_class": "weixin",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "2259874",
+      "name": "品质保证",
+      "font_class": "pinzhibaozheng",
+      "unicode": "e656",
+      "unicode_decimal": 58966
+    },
+    {
+      "icon_id": "2603053",
+      "name": "用户反馈",
+      "font_class": "yonghufankui",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "3776242",
+      "name": "放大镜",
+      "font_class": "fangdajing",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "7621346",
+      "name": "wife-d",
+      "font_class": "wife-d",
+      "unicode": "e7f5",
+      "unicode_decimal": 59381
+    },
+    {
+      "icon_id": "10047916",
+      "name": "快递",
+      "font_class": "kuaidi",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "11717109",
+      "name": "快递",
+      "font_class": "kuaidi1",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    },
+    {
+      "icon_id": "12903446",
+      "name": "网易云课堂",
+      "font_class": "tubiaozhizuomoban",
+      "unicode": "e63c",
+      "unicode_decimal": 58940
+    },
+    {
+      "icon_id": "14039483",
+      "name": "客服 -icon",
+      "font_class": "kefu-icon",
+      "unicode": "e67f",
+      "unicode_decimal": 59007
+    },
+    {
+      "icon_id": "14320431",
+      "name": "下拉框",
+      "font_class": "xialakuang",
+      "unicode": "e63d",
+      "unicode_decimal": 58941
+    }
+  ]
+}

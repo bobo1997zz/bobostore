@@ -1,0 +1,99 @@
+@charset "utf-8";
+#product_title_new {
+    @include productbox;
+    margin-top: 30px;
+    position: relative;
+    overflow: hidden;
+    // 新品标题
+    .new-title {
+        width: 100%;
+        height: 50px;
+        position: relative;
+        margin-top: 20px;
+        h2 {
+            position: absolute;
+            left: 0;
+            top: 0px;
+            @include font(28px, #333)
+        }
+        .new-title-span1 {
+            display: block;
+            position: absolute;
+            left: 120px;
+            top: 15px;
+            @include font(13px, #333)
+        }
+        .new-title-span2 {
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 15px;
+            @include font(13px, #333)
+        }
+    }
+    //新品商品
+    .new-pro {
+        @include displayflex(flex, flex, center);
+        justify-content: space-between;
+        margin-top: 10px;
+        li {
+            width: 265px;
+            height: 365px;
+            list-style: none;
+            margin-right: 10px;
+            //商品标签
+            .new-pro-p1 {
+                width: 70px;
+                height: 20px;
+                background-color: #e36844;
+                margin: 5px auto;
+                @include font(12px, #fff);
+                @include center(center, 20px)
+            }
+            //商品标题
+            .new-pro-p2 {
+                text-align: center;
+            }
+            //商品价格
+            .new-pro-p3 {
+                text-align: center;
+                .new-pro-p3-span2 {
+                    @include font(8px, #999)
+                }
+                .new-pro-p3-span1 {
+                    @include font(13px, #d4282d)
+                }
+            }
+            //商品图片 样式移入图片切换 默认隐藏
+            .active {
+                display: block;
+            }
+            img {
+                display: none;
+            }
+        }
+    }
+    //左右按钮
+    .btn-left {
+        position: absolute;
+        left: 1100px;
+        top: 230px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        @include font(20px, #eee);
+        @include center(center, 50px);
+        background-color: #e2c199;
+    }
+    .btn-right {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        position: absolute;
+        left: -60px;
+        top: 230px;
+        @include font(20px, #eee);
+        @include center(center, 50px);
+        background-color: #e2c199;
+    }
+}

@@ -1,2 +1,26 @@
 @charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@import "zjb.scss";
+@import "body";
 @import "head";
+@import "search";
+@import "banner";
+@import "product_new";
+@import "product_recommend";
+@import "product_limit";
+@import "product_welfare";
+@import "product_housr";
+@import "product_clothing";
+@import "product_liquor";
+@import "product_clean";
+@import "product_infant";
+@import "product_exercise";
+@import "product_3c";
+@import "product_global";
+@import "product_zxj";
+@import "product_our";
+@import "footer";
