@@ -1,0 +1,29 @@
+@charset "utf-8";
+#search-scroll {
+    display: none;
+    height: 50px;
+    width: 100%;
+    .search-scroll-main {
+        width: 1090px;
+        height: 50px;
+        margin: 0 auto;
+        @include displayflex(flex, row, center);
+        justify-content: space-around;
+        img {
+            width: 126px;
+            height: 30px;
+        }
+        ul {
+            width: 830px;
+            @include displayflex(flex, row, center);
+            justify-content: space-around;
+            li {
+                list-style: none;
+            }
+        }
+        span {
+            color: #CC9756;
+            font-size: 20px !important;
+        }
+    }
+}

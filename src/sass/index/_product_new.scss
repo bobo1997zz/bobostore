@@ -3,7 +3,7 @@
     @include productbox;
     margin-top: 30px;
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
     // 新品标题
     .new-title {
         width: 100%;
@@ -36,6 +36,7 @@
         @include displayflex(flex, flex, center);
         justify-content: space-between;
         margin-top: 10px;
+        overflow: hidden;
         li {
             width: 265px;
             height: 365px;
