@@ -44,7 +44,10 @@
         height: 50%;
         @include displayflex(flex, row, center);
         .limit_pro_center-pro-2 {
+            height: 100%;
             @include displayflex(flex, column, center);
+            justify-content: center;
+            align-items: flex-start;
             .limit_pro_center-pro-2-p4 {
                 width: 118px;
                 height: 31px;
@@ -52,7 +55,10 @@
                 @include center(center, 31px);
                 margin-top: 18px;
             }
-            font .limit_pro_center-pro-2-p2 {
+            .limit_pro_center-pro-2-p2 {
+                @include font(14px, #999);
+            }
+            .limit_pro_center-pro-2-p2 {
                 @include font(14px, #999);
             }
         }

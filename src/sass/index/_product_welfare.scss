@@ -66,24 +66,31 @@
                         width: 130px;
                         height: 100%;
                         margin: 0;
+                        background-color: #f4f0ea;
                     }
                     //中间商品右侧标题
                     .welfare_pro_center-pro-2 {
-                        width: 155px;
+                        margin-left: 10px !important;
+                        width: 145px;
                         height: 100%;
                         margin: 0;
                         @include displayflex(flex, column, center);
-                        align-content: space-between;
+                        justify-content: space-around;
+                        align-items: flex-start;
                         //大标题
                         .welfare_pro_center-pro-2-p1 {
                             @include font(14px, #333);
-                            @include center(center, 28px)
+                            // @include center(center, 28px)
                         }
                         //限时折扣价
                         .welfare_pro_center-pro-2-p2 {
                             @include font(12px, #333);
                             .welfare_pro_center-pro-2-p2-span1 {
                                 color: red;
+                            }
+                            .welfare_pro_center-pro-2-p2-span2 {
+                                color: red;
+                                @include font(20px, #be4141);
                             }
                         }
                         //原价

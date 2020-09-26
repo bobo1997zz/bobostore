@@ -1,4 +1,54 @@
+@charset "utf-8";
 #product_title_our {
     @include productbox(100%, 660px);
     background-color: $bcolor;
+    //标题
+    .product_title_our_title {
+        width: 1090px;
+        height: 28px;
+        margin: auto;
+        margin-top: 60px;
+        margin-bottom: 20px;
+        @include displayflex(flex, row, center);
+        p {
+            margin-left: 20px;
+        }
+    }
+    //商品
+    .product_title_our_content {
+        width: 1090px;
+        height: 492px;
+        margin: 0 auto 60px;
+        overflow: hidden;
+        @include displayflex(flex, row, center);
+        li {
+            width: 355px;
+            height: 492px;
+            position: relative;
+            list-style: none;
+            text-align: center;
+            margin-right: 20px;
+            //商品图片
+            .product_title_our_content_pic {
+                width: 355px;
+                height: 355px;
+            }
+            //下方空白
+            .product_title_our_content_pic_box {
+                width: 355px;
+                height: 137px;
+                background-color: #fff;
+            }
+            //评价
+            .product_title_our_content_pic_pingjia {
+                position: absolute;
+                left: 5px;
+                bottom: 0;
+                width: 345px;
+                height: 145px;
+                padding: 20px 0;
+                background-color: #fff;
+            }
+        }
+    }
 }
