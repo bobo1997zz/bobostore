@@ -24,7 +24,10 @@
         ul {
             width: 200px;
             height: 28px;
-            margin: 10px auto;
+            margin: auto;
+            line-height: 28px;
+            @include displayflex(flex, row, center);
+            justify-content: space-between;
             li {
                 width: 8px;
                 height: 8px;
@@ -32,7 +35,10 @@
                 border-radius: 50%;
                 list-style: none;
                 float: left;
-                margin-left: 20px;
+                // margin-left: 20px;
+            }
+            .over {
+                border: 3px solid #CC9756;
             }
         }
     }

@@ -3,7 +3,7 @@
     @include productbox;
     margin-top: 30px;
     position: relative;
-    // overflow: hidden;
+    overflow: hidden;
     // 新品标题
     .new-title {
         width: 100%;
@@ -37,11 +37,15 @@
         justify-content: space-between;
         margin-top: 10px;
         overflow: hidden;
+        position: absolute;
+        left: 0;
+        top: 80px;
         li {
             width: 265px;
             height: 365px;
             list-style: none;
             margin-right: 10px;
+            position: relative;
             //商品标签
             .new-pro-p1 {
                 width: 70px;
@@ -69,15 +73,29 @@
             .active {
                 display: block;
             }
-            img {
-                display: none;
+            img:nth-child(1) {
+                width: 265px;
+                height: 265px;
+                display: block;
             }
+            img:nth-child(2) {
+                width: 265px;
+                height: 265px;
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 1;
+                opacity: 0;
+            }
+        }
+        li:hover {
+            background-color: #f4f0ea !important;
         }
     }
     //左右按钮
     .btn-left {
         position: absolute;
-        left: 1100px;
+        left: 1030px;
         top: 230px;
         width: 50px;
         height: 50px;
@@ -85,16 +103,20 @@
         @include font(20px, #eee);
         @include center(center, 50px);
         background-color: #e2c199;
+        cursor: pointer;
+        z-index: 2;
     }
     .btn-right {
         width: 50px;
         height: 50px;
         border-radius: 50%;
         position: absolute;
-        left: -60px;
+        left: 20px;
         top: 230px;
         @include font(20px, #eee);
         @include center(center, 50px);
         background-color: #e2c199;
+        cursor: pointer;
+        z-index: 2;
     }
 }

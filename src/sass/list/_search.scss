@@ -3,7 +3,6 @@
     height: $search-height;
     background-color: $search-backgoundColor;
     @include displayflex(flex, column, center);
-    justify-content: space-around;
     position: relative;
     .search_buttom {
         @include productbox(1090px, 24px);
@@ -13,7 +12,6 @@
             width: calc(1090px /11);
             font-weight: 900;
             @include font(14px, #000);
-            text-align: center;
         }
     }
     .search_top {
@@ -101,13 +99,13 @@
     @include displayflex(flex, row, center);
     position: absolute;
     left: 200px;
-    top: 136px;
+    top: 140px;
     background-color: #fff;
-    padding: 0 20px 20px 20px;
+    z-index: 1;
+    padding: 14px 20px 20px 20px;
     visibility: hidden;
     width: 1224px;
     height: 402px;
-    z-index: 2;
     ul {
         list-style: none;
         width: 124px !important;
@@ -134,9 +132,5 @@
 }
 
 .search_buttom li:hover div {
-    visibility: visible !important;
-}
-
-.search_buttom>li:hover {
-    border-bottom: 3px solid #CC9756;
+    visibility: visible;
 }

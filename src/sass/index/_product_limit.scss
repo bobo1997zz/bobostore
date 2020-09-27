@@ -38,9 +38,10 @@
     width: 866px;
     height: 100%;
     @include displayflex(flex, row, center);
+    justify-content: space-around;
     flex-wrap: wrap;
     div {
-        width: 433px;
+        width: 413px;
         height: 50%;
         @include displayflex(flex, row, center);
         .limit_pro_center-pro-2 {
@@ -58,8 +59,18 @@
             .limit_pro_center-pro-2-p2 {
                 @include font(14px, #999);
             }
-            .limit_pro_center-pro-2-p2 {
-                @include font(14px, #999);
+            .limit_pro_center-pro-2-p5 {
+                width: 152px;
+                height: 10px;
+                border-radius: 5px;
+                margin: 8px 0;
+                border: 1px solid #ffe5e5;
+                .numBarIn {
+                    width: 98px;
+                    height: 100%;
+                    background-color: #ffe5e5;
+                    border-radius: 5px;
+                }
             }
         }
         .limit_pro_center-pro-1 {

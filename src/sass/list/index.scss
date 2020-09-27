@@ -1,0 +1,16 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@import "zjb.scss";
+@import "body";
+@import "head";
+@import "search";
+@import "search_scroll";
+@import "product_title";
+@import "left_nav";
+@import "right_nav";
+@import "product_fankui";
+@import "footer";

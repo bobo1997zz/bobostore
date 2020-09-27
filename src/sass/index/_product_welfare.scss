@@ -63,6 +63,10 @@
                     @include displayflex(flex, row, center);
                     //中间商品左侧图片
                     .welfare_pro_center-pro-1 {
+                        img {
+                            width: 130px;
+                            height: 100%;
+                        }
                         width: 130px;
                         height: 100%;
                         margin: 0;
@@ -123,7 +127,7 @@
                     @include displayflex(flex, row, center);
                     justify-content: space-around;
                     h3 {
-                        @include font(16px, #333)
+                        @include font(16px, #333);
                     }
                     span {
                         @include font(12px, #333)
@@ -144,6 +148,9 @@
                             width: 120px;
                             height: 50px;
                             p {
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
                                 width: 100%;
                                 @include displayflex(flex, row, center);
                                 justify-content: space-between;
@@ -180,6 +187,9 @@
                             width: 120px;
                             height: 50px;
                             p {
+                                overflow: hidden;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
                                 width: 100%;
                                 @include displayflex(flex, row, center);
                                 justify-content: space-between;

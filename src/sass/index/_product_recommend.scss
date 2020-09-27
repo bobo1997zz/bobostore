@@ -68,11 +68,11 @@
             //商品价格
             .recommend-pro-p3 {
                 text-align: center;
-                .new-pro-p3-span2 {
-                    @include font(8px, #999)
+                .recommend-pro-p3-span2 {
+                    @include font(12px, #999)
                 }
-                .new-pro-p3-span1 {
-                    @include font(13px, #d4282d)
+                .recommend-pro-p3-span1 {
+                    @include font(16px, #d4282d)
                 }
             }
         }
@@ -112,11 +112,11 @@
             .recommend-pro-p3 {
                 text-align: center;
                 margin-top: 5px;
-                .new-pro-p3-span2 {
-                    @include font(13px, #999)
+                .recommend-pro-p3-span2 {
+                    @include font(12px, #999)
                 }
-                .new-pro-p3-span1 {
-                    @include font(13px, #d4282d)
+                .recommend-pro-p3-span1 {
+                    @include font(14px, #d4282d)
                 }
             }
         }
