@@ -1,6 +1,8 @@
 @charset "utf-8";
 #product_title_welfare {
     @include productbox(100%, 535px);
+    background-color: #f4f0ea;
+    margin-top: 54px;
     //福利社title
     .product_title_welfare_title {
         width: 1090px;
@@ -35,6 +37,7 @@
             width: 624px;
             height: 376px;
             padding: 0 19px;
+            background-color: #fff;
             .welfare_pro_center-title {
                 width: 100%;
                 height: 44px;
@@ -70,7 +73,6 @@
                         width: 130px;
                         height: 100%;
                         margin: 0;
-                        background-color: #f4f0ea;
                     }
                     //中间商品右侧标题
                     .welfare_pro_center-pro-2 {
@@ -90,7 +92,7 @@
                         .welfare_pro_center-pro-2-p2 {
                             @include font(12px, #333);
                             .welfare_pro_center-pro-2-p2-span1 {
-                                color: red;
+                                color: #be4141;
                             }
                             .welfare_pro_center-pro-2-p2-span2 {
                                 color: red;
@@ -99,14 +101,14 @@
                         }
                         //原价
                         .welfare_pro_center-pro-2-p3 {
-                            @include font(12px, #333)
+                            @include font(14px, #a4a4a4)
                         }
                         //立即抢购图标
                         .welfare_pro_center-pro-2-p4 {
                             width: 90px;
                             height: 28px;
                             background-color: red;
-                            @include font(12px, #333);
+                            @include font(12px, #fff);
                             @include center(center, 28px)
                         }
                     }
@@ -118,9 +120,11 @@
             width: 222px;
             padding: 0 10px;
             height: 376px;
+            background-color: #fff;
             @include displayflex(flex, column, center);
             align-content: space-around;
             .welfare_pro_right_1 {
+                height: 188px;
                 .welfare_pro_right_1_title {
                     height: 50px;
                     line-height: 50px;
@@ -161,6 +165,7 @@
                 }
             }
             .welfare_pro_right_2 {
+                height: 188px;
                 .welfare_pro_right_2_title {
                     height: 50px;
                     line-height: 50px;

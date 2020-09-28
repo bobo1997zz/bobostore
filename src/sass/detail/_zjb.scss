@@ -1,0 +1,25 @@
+$bcolor:#f4f0ea;
+$search-height:140px;
+$search-backgoundColor:#fff;
+$dispaly:flex;
+$yel:#CC9756;
+@mixin productbox($width:1090px, $height:510px) {
+    width: $width;
+    height: $height;
+}
+
+@mixin displayflex($display:flex, $direction:column, $alignitems:center) {
+    display: $display;
+    flex-direction: $direction;
+    align-items: $alignitems;
+}
+
+@mixin font($size:14px, $color:#000) {
+    font-size: $size;
+    color: $color;
+}
+
+@mixin center($row:center, $low:10px) {
+    text-align: $row;
+    line-height: $low;
+}

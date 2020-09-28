@@ -2,8 +2,9 @@
 .product_titile_fenlei {
     @include displayflex(flex, row, center);
     width: 1090px;
-    height: 100px;
     margin: 0 auto;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dedede;
     .product_titile_fenlei_2 {
         @include displayflex(flex, row, center);
         flex-wrap: wrap;
@@ -11,11 +12,48 @@
         a {
             margin: 0 10px;
             text-decoration: none;
-            @include font(12px ，#333)
+            @include font(12px ，#333);
+            padding: 5px;
         }
     }
     .product_titile_fenlei_1 {
+        display: block;
         width: 100px;
-        height: 62px;
+    }
+}
+
+.product_titile_diqu {
+    width: 1090px;
+    margin: 0 auto;
+    padding: 20px 0;
+    border-bottom: 1px solid #dedede;
+    @include displayflex(flex, row, center);
+    .product_titile_diqu_2 {
+        a {
+            margin: 0 10px;
+            text-decoration: none;
+            @include font(12px ，#333)
+        }
+    }
+    .product_titile_diqu_1 {
+        width: 80px;
+    }
+}
+
+.product_titile_paixu {
+    width: 1090px;
+    margin: 0 auto;
+    padding: 20px 0;
+    border-bottom: 1px solid #dedede;
+    @include displayflex(flex, row, cente r);
+    .product_titile_paixu_2 {
+        a {
+            margin: 0 10px;
+            text-decoration: none;
+            @include font(12px ，#333)
+        }
+    }
+    .product_titile_paixu_1 {
+        width: 80px;
     }
 }

@@ -14,6 +14,9 @@
             margin-left: 14px;
         }
     }
+    .product_title_housr_title span:hover {
+        @include font(16px, #b4a078)
+    }
     //中间轮播图
     .product_title_housr_banner {
         width: 100%;
@@ -28,6 +31,7 @@
             position: absolute;
             left: 20px;
             top: 120px;
+            z-index: 4;
             background-color: #d0c4af;
             @include center(center, 50px);
             @include font(20px, #fff)
@@ -39,6 +43,7 @@
             position: absolute;
             right: 20px;
             top: 120px;
+            z-index: 4;
             background-color: #d0c4af;
             @include center(center, 50px);
             @include font(20px, #fff)
@@ -52,7 +57,7 @@
             @include displayflex(flex, row, center);
             justify-content: center;
             z-index: 2;
-            li {
+            div {
                 width: 8px;
                 height: 8px;
                 border-radius: 50%;

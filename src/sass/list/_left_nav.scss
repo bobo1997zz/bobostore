@@ -1,6 +1,8 @@
 @charset "utf-8";
 #left_nav {
     position: fixed;
+    width: 108px !important;
+    height: auto;
     left: 50px;
     top: 50px;
     li {
@@ -14,6 +16,17 @@
         img {
             width: 30px;
             height: 30px;
+        }
+        div {
+            height: 38px;
+            @include displayflex(flex, column, center);
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-left: 5px;
+            margin-bottom: 5px;
+            span {
+                height: 12px;
+            }
         }
     }
     li:first-of-type {

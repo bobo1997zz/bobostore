@@ -249,13 +249,47 @@ header .head-main .icon-xialakuang {
   font-size: 20px !important;
 }
 
+#banner {
+  width: 1090px;
+  height: 310px;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 10px;
+}
+#banner li {
+  list-style: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#banner .banner_btn {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+#banner .banner_btn div {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-left: 10px;
+  background-color: #fff;
+}
+
 .product_titile_fenlei {
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 1090px;
-  height: 100px;
   margin: 0 auto;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dedede;
 }
 .product_titile_fenlei .product_titile_fenlei_2 {
   display: flex;
@@ -269,14 +303,116 @@ header .head-main .icon-xialakuang {
   text-decoration: none;
   font-size: 12px ， #333;
   color: #000;
+  padding: 5px;
 }
 .product_titile_fenlei .product_titile_fenlei_1 {
+  display: block;
   width: 100px;
-  height: 62px;
+}
+
+.product_titile_diqu {
+  width: 1090px;
+  margin: 0 auto;
+  padding: 20px 0;
+  border-bottom: 1px solid #dedede;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.product_titile_diqu .product_titile_diqu_2 a {
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 12px ， #333;
+  color: #000;
+}
+.product_titile_diqu .product_titile_diqu_1 {
+  width: 80px;
+}
+
+.product_titile_paixu {
+  width: 1090px;
+  margin: 0 auto;
+  padding: 20px 0;
+  border-bottom: 1px solid #dedede;
+  display: flex;
+  flex-direction: row;
+  align-items: cente r;
+}
+.product_titile_paixu .product_titile_paixu_2 a {
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 12px ， #333;
+  color: #000;
+}
+.product_titile_paixu .product_titile_paixu_1 {
+  width: 80px;
+}
+
+#content {
+  width: 1090px;
+  margin: 30px auto 0;
+}
+#content ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: flex-start;
+}
+#content ul li {
+  width: 245px;
+  height: 400px;
+  list-style: none;
+  margin-right: 25px;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#content ul li .content_pic {
+  width: 245px;
+  height: 245px;
+}
+#content ul li .content_pic img {
+  width: 100%;
+  height: 100%;
+}
+#content ul li .content_pic_biaoqina {
+  background-color: #e36844;
+  padding: 5px;
+  font-size: 12px;
+  color: #fff;
+  margin: 5px 0;
+}
+#content ul li .content_pic_title {
+  text-align: center;
+  width: 200px;
+}
+#content ul li .content_pic_price {
+  margin: 5px 0;
+}
+#content ul li .content_pic_price span {
+  font-size: 13px;
+  color: #d4282d;
+}
+#content ul li .content_pic_price del {
+  font-size: 12px;
+  color: #999;
+}
+#content ul li hr {
+  width: 130px;
+  border: 1px solid #e8e8e8;
+}
+#content ul li .content_pic_js {
+  padding-top: 10px;
 }
 
 #left_nav {
   position: fixed;
+  width: 108px !important;
+  height: auto;
   left: 50px;
   top: 50px;
 }
@@ -295,6 +431,19 @@ header .head-main .icon-xialakuang {
 #left_nav li img {
   width: 30px;
   height: 30px;
+}
+#left_nav li div {
+  height: 38px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+#left_nav li div span {
+  height: 12px;
 }
 #left_nav li:first-of-type {
   background: url(../../img/背景.webp);
@@ -374,12 +523,12 @@ header .head-main .icon-xialakuang {
 }
 #product_title_fankui ul .product_title_fankui_1 .product_title_fankui_1_box div {
   width: 100px;
+  height: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  border: 1px solid #999;
-  padding-top: 20px;
+  border: 1px solid #E8E8E8;
 }
 #product_title_fankui ul .product_title_fankui_1 .product_title_fankui_1_box span {
   display: block !important;
@@ -471,4 +620,4 @@ footer .footer_b p {
   margin: 10px;
 }
 
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=list.css.map */

@@ -25,7 +25,9 @@
         position: relative;
         @include displayflex(flex, row, center);
         li {
-            list-style: none;
+            position: absolute;
+            left: 0;
+            top: 0;
         }
         .left {
             width: 50px;
@@ -57,7 +59,7 @@
             padding: 10px 0;
             @include displayflex(flex, row, center);
             justify-content: center;
-            li {
+            div {
                 width: 8px;
                 height: 8px;
                 border-radius: 50%;
@@ -76,6 +78,7 @@
             height: 361px;
             list-style: none;
             margin-bottom: 50px;
+            position: relative;
             @include displayflex(flex, column, center);
             justify-content: space-between;
             .product_title_3c_content_p1 {
@@ -97,6 +100,18 @@
                 del {
                     @include font(12px, #999)
                 }
+            }
+            img:nth-of-type(1) {
+                width: 265px;
+                height: 265px;
+            }
+            img:nth-of-type(2) {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 265px;
+                height: 265px;
+                opacity: 0;
             }
         }
     }

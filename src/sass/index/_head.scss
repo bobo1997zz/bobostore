@@ -8,8 +8,10 @@ header {
     .head-main {
         @include productbox(1090px, 36px);
         @include displayflex(flex, row, center);
-        justify-content: space-between;
+        align-items: start;
+        justify-content: flex-end;
         text-transform: none;
+        position: relative;
         .head-main-left li {
             list-style: none;
             height: 36px;
@@ -19,6 +21,7 @@ header {
             display: inline-block;
             padding: 0 10px;
             border-right: 1px solid #ccc;
+            margin-top: 8px;
         }
         .head-main-right span:last-of-type {
             border-right: none;
@@ -43,4 +46,10 @@ header {
             font-size: 10px !important;
         }
     }
+}
+
+.head-main-left {
+    position: absolute;
+    left: 0;
+    top: 0;
 }

@@ -25,14 +25,15 @@
                 width: 250px;
                 height: 100px;
                 margin: auto;
+                ;
                 @include displayflex(flex, row, center);
                 justify-content: space-between;
                 div {
                     width: 100px;
+                    height: 100px;
                     @include displayflex(flex, column, center);
                     justify-content: space-evenly;
-                    border: 1px solid #999;
-                    padding-top: 20px;
+                    border: 1px solid #E8E8E8;
                 }
                 span {
                     display: block !important;

@@ -26,8 +26,10 @@ header .head-main {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  align-items: start;
+  justify-content: flex-end;
   text-transform: none;
+  position: relative;
 }
 header .head-main .head-main-left li {
   list-style: none;
@@ -38,6 +40,7 @@ header .head-main .head-main-right > span {
   display: inline-block;
   padding: 0 10px;
   border-right: 1px solid #ccc;
+  margin-top: 8px;
 }
 header .head-main .head-main-right span:last-of-type {
   border-right: none;
@@ -64,6 +67,12 @@ header .head-main .head-main-left a:hover {
 }
 header .head-main .icon-xialakuang {
   font-size: 10px !important;
+}
+
+.head-main-left {
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 #search {
@@ -213,6 +222,18 @@ header .head-main .icon-xialakuang {
   color: #333;
   font-weight: normal;
 }
+.search_buttom li div ul li a {
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 12px;
+  color: #333;
+}
+.search_buttom li div ul li:nth-of-type(1) {
+  width: 30px;
+  padding: 10px 0;
+  border-bottom: 1px solid #333;
+  text-align: left;
+}
 
 .search_buttom li:hover div {
   visibility: visible !important;
@@ -234,7 +255,10 @@ header .head-main .icon-xialakuang {
   display: flex;
   flex-direction: row;
   align-items: center;
+  font-size: 14px;
+  color: #000;
   justify-content: space-around;
+  font-weight: bolder;
 }
 #search-scroll .search-scroll-main img {
   width: 126px;
@@ -249,28 +273,29 @@ header .head-main .icon-xialakuang {
 }
 #search-scroll .search-scroll-main ul li {
   list-style: none;
+  height: 50px;
+  line-height: 50px;
 }
 #search-scroll .search-scroll-main span {
   color: #CC9756;
   font-size: 20px !important;
 }
 
-.search-scroll-main li > div {
+#search-scroll .search-scroll-main li > div {
   display: flex;
   flex-direction: row;
   align-items: center;
+  align-items: flex-start;
   position: fixed;
   left: 200px;
   top: 50px;
   background-color: #fff;
-  z-index: 1;
-  padding: 14px 20px 20px 20px;
   visibility: hidden;
   width: 1224px;
-  height: 402px;
+  height: 460px;
   z-index: 5;
 }
-.search-scroll-main li > div ul {
+#search-scroll .search-scroll-main li > div ul {
   list-style: none;
   width: 124px !important;
   height: 368px;
@@ -278,24 +303,34 @@ header .head-main .icon-xialakuang {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
 }
-.search-scroll-main li > div ul li {
+#search-scroll .search-scroll-main li > div ul li {
   list-style: none;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
   margin: 5px 0;
 }
-.search-scroll-main li > div ul li img {
+#search-scroll .search-scroll-main li > div ul li img {
   width: 50px;
   height: 50px;
 }
-.search-scroll-main li > div ul li p {
+#search-scroll .search-scroll-main li > div ul li p {
   font-size: 12px;
   color: #333;
   font-weight: normal;
+}
+#search-scroll .search-scroll-main li > div ul li a {
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 12px;
+  color: #333;
+}
+#search-scroll .search-scroll-main li > div ul li:nth-of-type(1) {
+  border-bottom: 1px solid #333;
+  text-align: left;
 }
 
 .search-scroll-main li:hover div {
@@ -619,7 +654,7 @@ header .head-main .icon-xialakuang {
   text-align: center;
   font-size: 13px;
   color: #333;
-  font-weight: 900;
+  font-weight: bold;
 }
 #product_title_recommend .recommend-pro .recommend-pro-right .recommend-pro-p3 {
   text-align: center;
@@ -678,11 +713,7 @@ header .head-main .icon-xialakuang {
 #product_title_limit .product_title_limit_pro .limit_pro_left {
   width: 224px;
   height: 429px;
-  background-color: red;
-}
-#product_title_limit .product_title_limit_pro .limit_pro_left img {
-  width: 100%;
-  height: 100%;
+  background: url(http://yanxuan.nosdn.127.net/a0d0bd891ebb55308dbddda736ed53cc.png);
 }
 
 #product_title_limit .limit_pro_right {
@@ -695,8 +726,9 @@ header .head-main .icon-xialakuang {
   flex-wrap: wrap;
 }
 #product_title_limit .limit_pro_right div {
-  width: 413px;
+  width: 425px;
   height: 50%;
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -716,13 +748,15 @@ header .head-main .icon-xialakuang {
   text-align: center;
   line-height: 31px;
   margin-top: 18px;
+  font-size: 16px;
+  color: #fff;
 }
 #product_title_limit .limit_pro_right div .limit_pro_center-pro-2 .limit_pro_center-pro-2-p2 {
   font-size: 14px;
   color: #999;
 }
 #product_title_limit .limit_pro_right div .limit_pro_center-pro-2 .limit_pro_center-pro-2-p5 {
-  width: 152px;
+  width: 130px;
   height: 10px;
   border-radius: 5px;
   margin: 8px 0;
@@ -737,15 +771,82 @@ header .head-main .icon-xialakuang {
 #product_title_limit .limit_pro_right div .limit_pro_center-pro-1 {
   width: 180px;
   height: 100%;
+  margin-right: 10px;
 }
 #product_title_limit .limit_pro_right div .limit_pro_center-pro-1 img {
   width: 180px;
   height: 180px;
 }
+#product_title_limit .limit_pro_right div .slaenum {
+  font-size: 14px;
+  color: #999;
+  position: absolute;
+  right: 20px;
+  top: 85px;
+}
+
+#product_title_limit .limit_pro_center-pro-2-p3 span:nth-of-type(1) {
+  font-size: 14px;
+  color: #be4141;
+}
+#product_title_limit .limit_pro_center-pro-2-p3 span:nth-of-type(2) {
+  font-size: 24px;
+  color: #be4141;
+  font-weight: bolder;
+}
+#product_title_limit .limit_pro_center-pro-2-p3 del {
+  font-size: 14px;
+  color: #999;
+}
+
+#product_title_limit .limit_pro_left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#product_title_limit .limit_pro_left h3 {
+  height: 36px;
+  font-size: 36px;
+  color: #615548;
+}
+#product_title_limit .limit_pro_left div {
+  width: 150px;
+  height: 40px;
+  margin-top: 18px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+#product_title_limit .limit_pro_left div span {
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+}
+#product_title_limit .limit_pro_left .limit_pro_left_p1 {
+  height: 22px;
+  margin-top: 30px;
+}
+#product_title_limit .limit_pro_left .limit_pro_left_p2 {
+  width: 110px;
+  height: 30px;
+  margin-top: 50px;
+  border-radius: 15px;
+  background-color: #a7936e;
+  text-align: center;
+  line-height: 30px;
+}
 
 #product_title_welfare {
   width: 100%;
   height: 535px;
+  background-color: #f4f0ea;
+  margin-top: 54px;
 }
 #product_title_welfare .product_title_welfare_title {
   width: 1090px;
@@ -779,6 +880,7 @@ header .head-main .icon-xialakuang {
   width: 624px;
   height: 376px;
   padding: 0 19px;
+  background-color: #fff;
 }
 #product_title_welfare .product_title_welfare_pro .welfare_pro_center .welfare_pro_center-title {
   width: 100%;
@@ -818,7 +920,6 @@ header .head-main .icon-xialakuang {
   width: 130px;
   height: 100%;
   margin: 0;
-  background-color: #f4f0ea;
 }
 #product_title_welfare .product_title_welfare_pro .welfare_pro_center .welfare_pro_center-pro div .welfare_pro_center-pro-1 img {
   width: 130px;
@@ -844,7 +945,7 @@ header .head-main .icon-xialakuang {
   color: #333;
 }
 #product_title_welfare .product_title_welfare_pro .welfare_pro_center .welfare_pro_center-pro div .welfare_pro_center-pro-2 .welfare_pro_center-pro-2-p2 .welfare_pro_center-pro-2-p2-span1 {
-  color: red;
+  color: #be4141;
 }
 #product_title_welfare .product_title_welfare_pro .welfare_pro_center .welfare_pro_center-pro div .welfare_pro_center-pro-2 .welfare_pro_center-pro-2-p2 .welfare_pro_center-pro-2-p2-span2 {
   color: red;
@@ -852,15 +953,15 @@ header .head-main .icon-xialakuang {
   color: #be4141;
 }
 #product_title_welfare .product_title_welfare_pro .welfare_pro_center .welfare_pro_center-pro div .welfare_pro_center-pro-2 .welfare_pro_center-pro-2-p3 {
-  font-size: 12px;
-  color: #333;
+  font-size: 14px;
+  color: #a4a4a4;
 }
 #product_title_welfare .product_title_welfare_pro .welfare_pro_center .welfare_pro_center-pro div .welfare_pro_center-pro-2 .welfare_pro_center-pro-2-p4 {
   width: 90px;
   height: 28px;
   background-color: red;
   font-size: 12px;
-  color: #333;
+  color: #fff;
   text-align: center;
   line-height: 28px;
 }
@@ -868,10 +969,14 @@ header .head-main .icon-xialakuang {
   width: 222px;
   padding: 0 10px;
   height: 376px;
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   align-content: space-around;
+}
+#product_title_welfare .product_title_welfare_pro .welfare_pro_right .welfare_pro_right_1 {
+  height: 188px;
 }
 #product_title_welfare .product_title_welfare_pro .welfare_pro_right .welfare_pro_right_1 .welfare_pro_right_1_title {
   height: 50px;
@@ -919,6 +1024,9 @@ header .head-main .icon-xialakuang {
   justify-content: space-between;
   font-size: 12px;
   color: #333;
+}
+#product_title_welfare .product_title_welfare_pro .welfare_pro_right .welfare_pro_right_2 {
+  height: 188px;
 }
 #product_title_welfare .product_title_welfare_pro .welfare_pro_right .welfare_pro_right_2 .welfare_pro_right_2_title {
   height: 50px;
@@ -985,6 +1093,10 @@ header .head-main .icon-xialakuang {
 #product_title_housr .product_title_housr_title a {
   margin-left: 14px;
 }
+#product_title_housr .product_title_housr_title span:hover {
+  font-size: 16px;
+  color: #b4a078;
+}
 #product_title_housr .product_title_housr_banner {
   width: 100%;
   height: 310px;
@@ -998,6 +1110,7 @@ header .head-main .icon-xialakuang {
   position: absolute;
   left: 20px;
   top: 120px;
+  z-index: 4;
   background-color: #d0c4af;
   text-align: center;
   line-height: 50px;
@@ -1011,6 +1124,7 @@ header .head-main .icon-xialakuang {
   position: absolute;
   right: 20px;
   top: 120px;
+  z-index: 4;
   background-color: #d0c4af;
   text-align: center;
   line-height: 50px;
@@ -1029,7 +1143,7 @@ header .head-main .icon-xialakuang {
   justify-content: center;
   z-index: 2;
 }
-#product_title_housr .product_title_housr_banner .product_title_housr_banner_btn li {
+#product_title_housr .product_title_housr_banner .product_title_housr_banner_btn div {
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -1120,12 +1234,11 @@ header .head-main .icon-xialakuang {
   height: 310px;
   margin-bottom: 20px;
   position: relative;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
 }
 #product_title_clothing .product_title_clothing_banner li {
-  list-style: none;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 #product_title_clothing .product_title_clothing_banner .left {
   width: 50px;
@@ -1164,7 +1277,7 @@ header .head-main .icon-xialakuang {
   align-items: center;
   justify-content: center;
 }
-#product_title_clothing .product_title_clothing_banner .product_title_clothing_banner_btn li {
+#product_title_clothing .product_title_clothing_banner .product_title_clothing_banner_btn div {
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -1183,6 +1296,7 @@ header .head-main .icon-xialakuang {
   height: 361px;
   list-style: none;
   margin-bottom: 50px;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1198,7 +1312,7 @@ header .head-main .icon-xialakuang {
   top: 0;
   width: 265px;
   height: 265px;
-  display: none;
+  opacity: 0;
 }
 #product_title_clothing .product_title_clothing_content li .product_title_clothing_content_p1 {
   width: 100px;
@@ -1253,7 +1367,9 @@ header .head-main .icon-xialakuang {
   align-items: center;
 }
 #product_title_liquor .product_title_liquor_banner li {
-  list-style: none;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 #product_title_liquor .product_title_liquor_banner .left {
   width: 50px;
@@ -1292,7 +1408,7 @@ header .head-main .icon-xialakuang {
   align-items: center;
   justify-content: center;
 }
-#product_title_liquor .product_title_liquor_banner .product_title_liquor_banner_btn li {
+#product_title_liquor .product_title_liquor_banner .product_title_liquor_banner_btn div {
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -1311,6 +1427,7 @@ header .head-main .icon-xialakuang {
   height: 361px;
   list-style: none;
   margin-bottom: 50px;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1341,6 +1458,18 @@ header .head-main .icon-xialakuang {
   font-size: 12px;
   color: #999;
 }
+#product_title_liquor .product_title_liquor_content li img:nth-of-type(1) {
+  width: 265px;
+  height: 265px;
+}
+#product_title_liquor .product_title_liquor_content li img:nth-of-type(2) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 265px;
+  height: 265px;
+  opacity: 0;
+}
 
 #product_title_clean {
   width: 1090px;
@@ -1369,7 +1498,9 @@ header .head-main .icon-xialakuang {
   align-items: center;
 }
 #product_title_clean .product_title_clean_banner li {
-  list-style: none;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 #product_title_clean .product_title_clean_banner .left {
   width: 50px;
@@ -1408,7 +1539,7 @@ header .head-main .icon-xialakuang {
   align-items: center;
   justify-content: center;
 }
-#product_title_clean .product_title_clean_banner .product_title_clean_banner_btn li {
+#product_title_clean .product_title_clean_banner .product_title_clean_banner_btn div {
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -1427,6 +1558,7 @@ header .head-main .icon-xialakuang {
   height: 361px;
   list-style: none;
   margin-bottom: 50px;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1457,6 +1589,18 @@ header .head-main .icon-xialakuang {
   font-size: 12px;
   color: #999;
 }
+#product_title_clean .product_title_clean_content li img:nth-of-type(1) {
+  width: 265px;
+  height: 265px;
+}
+#product_title_clean .product_title_clean_content li img:nth-of-type(2) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 265px;
+  height: 265px;
+  opacity: 0;
+}
 
 #product_title_infant {
   width: 1090px;
@@ -1485,7 +1629,9 @@ header .head-main .icon-xialakuang {
   align-items: center;
 }
 #product_title_infant .product_title_infant_banner li {
-  list-style: none;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 #product_title_infant .product_title_infant_banner .left {
   width: 50px;
@@ -1524,7 +1670,7 @@ header .head-main .icon-xialakuang {
   align-items: center;
   justify-content: center;
 }
-#product_title_infant .product_title_infant_banner .product_title_infant_banner_btn li {
+#product_title_infant .product_title_infant_banner .product_title_infant_banner_btn div {
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -1543,6 +1689,7 @@ header .head-main .icon-xialakuang {
   height: 361px;
   list-style: none;
   margin-bottom: 50px;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1572,6 +1719,18 @@ header .head-main .icon-xialakuang {
 #product_title_infant .product_title_infant_content li .product_title_infant_content_p3 del {
   font-size: 12px;
   color: #999;
+}
+#product_title_infant .product_title_infant_content img:nth-of-type(1) {
+  width: 265px;
+  height: 265px;
+}
+#product_title_infant .product_title_infant_content img:nth-of-type(2) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 265px;
+  height: 265px;
+  opacity: 0;
 }
 
 #product_title_exercise {
@@ -1607,7 +1766,9 @@ header .head-main .icon-xialakuang {
   align-items: center;
 }
 #product_title_exercise .product_title_exercise_banner li {
-  list-style: none;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 #product_title_exercise .product_title_exercise_banner .left {
   width: 50px;
@@ -1646,7 +1807,7 @@ header .head-main .icon-xialakuang {
   align-items: center;
   justify-content: center;
 }
-#product_title_exercise .product_title_exercise_banner .product_title_exercise_banner_btn li {
+#product_title_exercise .product_title_exercise_banner .product_title_exercise_banner_btn div {
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -1665,6 +1826,7 @@ header .head-main .icon-xialakuang {
   height: 361px;
   list-style: none;
   margin-bottom: 50px;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1694,6 +1856,18 @@ header .head-main .icon-xialakuang {
 #product_title_exercise .product_title_exercise_content li .product_title_exercise_content_p3 del {
   font-size: 12px;
   color: #999;
+}
+#product_title_exercise .product_title_exercise_content li img:nth-of-type(1) {
+  width: 265px;
+  height: 265px;
+}
+#product_title_exercise .product_title_exercise_content li img:nth-of-type(2) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 265px;
+  height: 265px;
+  opacity: 0;
 }
 
 #product_title_3c {
@@ -1729,7 +1903,9 @@ header .head-main .icon-xialakuang {
   align-items: center;
 }
 #product_title_3c .product_title_3c_banner li {
-  list-style: none;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 #product_title_3c .product_title_3c_banner .left {
   width: 50px;
@@ -1768,7 +1944,7 @@ header .head-main .icon-xialakuang {
   align-items: center;
   justify-content: center;
 }
-#product_title_3c .product_title_3c_banner .product_title_3c_banner_btn li {
+#product_title_3c .product_title_3c_banner .product_title_3c_banner_btn div {
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -1787,6 +1963,7 @@ header .head-main .icon-xialakuang {
   height: 361px;
   list-style: none;
   margin-bottom: 50px;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1816,6 +1993,18 @@ header .head-main .icon-xialakuang {
 #product_title_3c .product_title_3c_content li .product_title_3c_content_p3 del {
   font-size: 12px;
   color: #999;
+}
+#product_title_3c .product_title_3c_content li img:nth-of-type(1) {
+  width: 265px;
+  height: 265px;
+}
+#product_title_3c .product_title_3c_content li img:nth-of-type(2) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 265px;
+  height: 265px;
+  opacity: 0;
 }
 
 #product_title_global {
@@ -1851,7 +2040,9 @@ header .head-main .icon-xialakuang {
   align-items: center;
 }
 #product_title_global .product_title_global_banner li {
-  list-style: none;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 #product_title_global .product_title_global_banner .left {
   width: 50px;
@@ -1890,7 +2081,7 @@ header .head-main .icon-xialakuang {
   align-items: center;
   justify-content: center;
 }
-#product_title_global .product_title_global_banner .product_title_global_banner_btn li {
+#product_title_global .product_title_global_banner .product_title_global_banner_btn div {
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -1909,6 +2100,7 @@ header .head-main .icon-xialakuang {
   height: 361px;
   list-style: none;
   margin-bottom: 50px;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1938,6 +2130,18 @@ header .head-main .icon-xialakuang {
 #product_title_global .product_title_global_content li .product_title_global_content_p3 del {
   font-size: 12px;
   color: #999;
+}
+#product_title_global .product_title_global_content li img:nth-of-type(1) {
+  width: 265px;
+  height: 265px;
+}
+#product_title_global .product_title_global_content li img:nth-of-type(2) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 265px;
+  height: 265px;
+  opacity: 0;
 }
 
 #product_title_zxj {
@@ -1979,6 +2183,7 @@ header .head-main .icon-xialakuang {
   width: 100%;
   height: 660px;
   background-color: #f4f0ea;
+  position: relative;
 }
 #product_title_our .product_title_our_title {
   width: 1090px;
@@ -1993,33 +2198,41 @@ header .head-main .icon-xialakuang {
 #product_title_our .product_title_our_title p {
   margin-left: 20px;
 }
-#product_title_our .product_title_our_content {
+#product_title_our div {
   width: 1090px;
   height: 492px;
   margin: 0 auto 60px;
   overflow: hidden;
+  position: relative;
+}
+#product_title_our div .product_title_our_content {
+  width: auto;
+  width: 3000px;
+  margin: 0 auto 60px;
+  position: absolute;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-#product_title_our .product_title_our_content li {
+#product_title_our div .product_title_our_content li {
   width: 355px;
   height: 492px;
   position: relative;
   list-style: none;
   text-align: center;
   margin-right: 20px;
+  background-color: #fff;
 }
-#product_title_our .product_title_our_content li .product_title_our_content_pic {
+#product_title_our div .product_title_our_content li .product_title_our_content_pic {
   width: 355px;
   height: 355px;
 }
-#product_title_our .product_title_our_content li .product_title_our_content_pic_box {
+#product_title_our div .product_title_our_content li .product_title_our_content_pic_box {
   width: 355px;
   height: 137px;
   background-color: #fff;
 }
-#product_title_our .product_title_our_content li .product_title_our_content_pic_pingjia {
+#product_title_our div .product_title_our_content li .product_title_our_content_pic_pingjia {
   position: absolute;
   left: 5px;
   bottom: 0;
@@ -2027,6 +2240,50 @@ header .head-main .icon-xialakuang {
   height: 145px;
   padding: 20px 0;
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: flex-start;
+}
+#product_title_our .btn-left {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  left: 155px;
+  top: 300px;
+  background-color: #e2c299;
+  text-align: center;
+  line-height: 50px;
+}
+#product_title_our .btn-right {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  right: 155px;
+  top: 300px;
+  background-color: #e2c299;
+  text-align: center;
+  line-height: 50px;
+}
+
+.product_title_our_content_pic_pingjia p:nth-of-type(1) {
+  font-size: 13px;
+  color: #999;
+  margin: 10px;
+}
+
+.product_title_our_content_pic_pingjia p:nth-of-type(2) {
+  font-size: 16px;
+  color: #333;
+  margin: 10px;
+}
+
+.product_title_our_content_pic_pingjia p:nth-of-type(3) {
+  font-size: 13px;
+  color: #333;
+  margin: 10px;
 }
 
 #product_title_fankui {
@@ -2068,12 +2325,12 @@ header .head-main .icon-xialakuang {
 }
 #product_title_fankui ul .product_title_fankui_1 .product_title_fankui_1_box div {
   width: 100px;
+  height: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  border: 1px solid #999;
-  padding-top: 20px;
+  border: 1px solid #E8E8E8;
 }
 #product_title_fankui ul .product_title_fankui_1 .product_title_fankui_1_box span {
   display: block !important;
@@ -2132,6 +2389,19 @@ header .head-main .icon-xialakuang {
   width: 30px;
   height: 30px;
 }
+#left_nav li div {
+  height: 38px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+#left_nav li div span {
+  height: 12px;
+}
 #left_nav li:first-of-type {
   background: url(../../img/背景.webp);
   text-align: center;
@@ -2161,7 +2431,7 @@ header .head-main .icon-xialakuang {
   color: #666;
 }
 #right_nav li span {
-  font-size: 40px !important;
+  font-size: 30px !important;
   margin-bottom: 5px;
 }
 #right_nav li:first-of-type {

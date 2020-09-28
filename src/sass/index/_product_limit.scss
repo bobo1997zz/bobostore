@@ -25,11 +25,7 @@
         .limit_pro_left {
             width: 224px;
             height: 429px;
-            background-color: red;
-            img {
-                width: 100%;
-                height: 100%;
-            }
+            background: url(http://yanxuan.nosdn.127.net/a0d0bd891ebb55308dbddda736ed53cc.png);
         }
     }
 }
@@ -41,8 +37,9 @@
     justify-content: space-around;
     flex-wrap: wrap;
     div {
-        width: 413px;
+        width: 425px;
         height: 50%;
+        position: relative;
         @include displayflex(flex, row, center);
         .limit_pro_center-pro-2 {
             height: 100%;
@@ -55,12 +52,13 @@
                 background-color: #be4141;
                 @include center(center, 31px);
                 margin-top: 18px;
+                @include font(16px, #fff);
             }
             .limit_pro_center-pro-2-p2 {
                 @include font(14px, #999);
             }
             .limit_pro_center-pro-2-p5 {
-                width: 152px;
+                width: 130px;
                 height: 10px;
                 border-radius: 5px;
                 margin: 8px 0;
@@ -76,10 +74,69 @@
         .limit_pro_center-pro-1 {
             width: 180px;
             height: 100%;
+            margin-right: 10px;
             img {
                 width: 180px;
                 height: 180px;
             }
         }
+        .slaenum {
+            @include font(14px, #999);
+            position: absolute;
+            right: 20px;
+            top: 85px;
+        }
+    }
+}
+
+// #product_title_limit .limit_pro_right>div {
+//     border: 1px solid #999;
+// }
+#product_title_limit .limit_pro_center-pro-2-p3 {
+    span:nth-of-type(1) {
+        @include font(14px, #be4141);
+    }
+    span:nth-of-type(2) {
+        @include font(24px, #be4141);
+        font-weight: bolder;
+    }
+    del {
+        @include font(14px, #999);
+    }
+}
+
+#product_title_limit .limit_pro_left {
+    @include displayflex(flex, column, center);
+    justify-content: center;
+    h3 {
+        height: 36px;
+        @include font(36px, #615548);
+    }
+    div {
+        width: 150px;
+        height: 40px;
+        margin-top: 18px;
+        @include displayflex(flex, row, center);
+        justify-content: space-between;
+        span {
+            width: 40px;
+            height: 40px;
+            background-color: black;
+            @include font(18px, #fff);
+            @include center(center, 40px);
+        }
+    }
+    .limit_pro_left_p1 {
+        height: 22px;
+        margin-top: 30px;
+    }
+    .limit_pro_left_p2 {
+        width: 110px;
+        height: 30px;
+        margin-top: 50px;
+        border-radius: 15px;
+        background-color: #a7936e;
+        text-align: center;
+        line-height: 30px;
     }
 }

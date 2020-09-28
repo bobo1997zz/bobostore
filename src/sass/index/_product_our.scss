@@ -2,7 +2,7 @@
 #product_title_our {
     @include productbox(100%, 660px);
     background-color: $bcolor;
-    //标题
+    position: relative; //标题
     .product_title_our_title {
         width: 1090px;
         height: 28px;
@@ -14,41 +14,87 @@
             margin-left: 20px;
         }
     }
-    //商品
-    .product_title_our_content {
+    div {
         width: 1090px;
         height: 492px;
         margin: 0 auto 60px;
         overflow: hidden;
-        @include displayflex(flex, row, center);
-        li {
-            width: 355px;
-            height: 492px;
-            position: relative;
-            list-style: none;
-            text-align: center;
-            margin-right: 20px;
-            //商品图片
-            .product_title_our_content_pic {
+        position: relative;
+        ;
+        //商品
+        .product_title_our_content {
+            width: auto;
+            width: 3000px;
+            margin: 0 auto 60px;
+            position: absolute;
+            @include displayflex(flex, row, center);
+            li {
                 width: 355px;
-                height: 355px;
-            }
-            //下方空白
-            .product_title_our_content_pic_box {
-                width: 355px;
-                height: 137px;
+                height: 492px;
+                position: relative;
+                list-style: none;
+                text-align: center;
+                margin-right: 20px;
                 background-color: #fff;
-            }
-            //评价
-            .product_title_our_content_pic_pingjia {
-                position: absolute;
-                left: 5px;
-                bottom: 0;
-                width: 345px;
-                height: 145px;
-                padding: 20px 0;
-                background-color: #fff;
+                //商品图片
+                .product_title_our_content_pic {
+                    width: 355px;
+                    height: 355px;
+                }
+                //下方空白
+                .product_title_our_content_pic_box {
+                    width: 355px;
+                    height: 137px;
+                    background-color: #fff;
+                }
+                //评价
+                .product_title_our_content_pic_pingjia {
+                    position: absolute;
+                    left: 5px;
+                    bottom: 0;
+                    width: 345px;
+                    height: 145px;
+                    padding: 20px 0;
+                    background-color: #fff;
+                    @include displayflex(flex, column, center);
+                    align-items: flex-start;
+                }
             }
         }
     }
+    .btn-left {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        left: 155px;
+        top: 300px;
+        background-color: #e2c299;
+        @include center(center, 50px);
+    }
+    .btn-right {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        position: absolute;
+        right: 155px;
+        top: 300px;
+        background-color: #e2c299;
+        @include center(center, 50px);
+    }
+}
+
+.product_title_our_content_pic_pingjia p:nth-of-type(1) {
+    @include font(13px, #999);
+    margin: 10px;
+}
+
+.product_title_our_content_pic_pingjia p:nth-of-type(2) {
+    @include font(16px, #333);
+    margin: 10px;
+}
+
+.product_title_our_content_pic_pingjia p:nth-of-type(3) {
+    @include font(13px, #333);
+    margin: 10px;
 }
