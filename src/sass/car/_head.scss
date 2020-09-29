@@ -1,0 +1,46 @@
+@charset "utf-8";
+header {
+    width: 100%;
+    height: 36px;
+    background-color: black;
+    color: #fff;
+    @include displayflex;
+    .head-main {
+        @include productbox(1090px, 36px);
+        @include displayflex(flex, row, center);
+        justify-content: space-between;
+        text-transform: none;
+        .head-main-left li {
+            list-style: none;
+            height: 36px;
+            line-height: 36px;
+        }
+        .head-main-right>span {
+            display: inline-block;
+            padding: 0 10px;
+            border-right: 1px solid #ccc;
+        }
+        .head-main-right span:last-of-type {
+            border-right: none;
+        }
+        .head-main-right a {
+            text-decoration: none;
+            cursor: pointer;
+            @include font(12px, #cccccc)
+        }
+        .head-main-left a {
+            text-decoration: none;
+            cursor: pointer;
+            @include font(12px, #cc9556)
+        }
+        .head-main-right a:hover {
+            @include font(12px, #fff)
+        }
+        .head-main-left a:hover {
+            @include font(12px, #fff)
+        }
+        .icon-xialakuang {
+            font-size: 10px !important;
+        }
+    }
+}

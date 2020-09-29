@@ -9,46 +9,53 @@
         justify-content: flex-start;
         li {
             width: 245px;
-            height: 400px;
+            height: 500px;
             list-style: none;
             margin-right: 25px;
             margin-top: 25px;
-            @include displayflex(flex, column, center);
-            justify-content: center;
-            .content_pic {
-                width: 245px;
-                height: 245px;
-                img {
-                    width: 100%;
-                    height: 100%;
-                }
-            }
-            .content_pic_biaoqina {
-                background-color: #e36844;
-                padding: 5px;
-                @include font(12px, #fff);
-                margin: 5px 0;
-            }
-            .content_pic_title {
-                text-align: center;
-                width: 200px;
-            }
-            .content_pic_price {
-                margin: 5px 0;
-                span {
-                    @include font(13px, #d4282d)
-                }
-                del {
-                    @include font(12px, #999)
-                }
-            }
-            hr {
-                width: 130px;
-                border: 1px solid #e8e8e8;
-            }
             .content_pic_js {
                 padding-top: 10px;
             }
         }
+    }
+}
+
+#content li a {
+    @include displayflex(flex, column, center);
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    .content_pic {
+        width: 245px;
+        height: 245px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .content_pic_biaoqina {
+        background-color: #e36844;
+        padding: 5px;
+        @include font(12px, #fff);
+        margin: 5px 0;
+    }
+    .content_pic_title {
+        text-align: center;
+        width: 200px;
+    }
+    .content_pic_price {
+        margin: 5px 0;
+        span {
+            @include font(13px, #d4282d)
+        }
+        del {
+            @include font(12px, #999)
+        }
+    }
+    hr {
+        width: 130px;
+        height: 1px;
+        border: 0;
+        background-color: #999;
     }
 }

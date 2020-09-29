@@ -233,205 +233,217 @@ header .head-main .icon-xialakuang {
   border-bottom: 3px solid #CC9756;
 }
 
-#content {
-  width: 1090px;
-  margin: 0 auto;
+#car {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 50px;
-}
-#content .content-left {
-  position: relative;
-}
-#content .content-left .content-glass {
-  width: 430px;
-  height: 430px;
-  border: 1px solid #999;
-  position: relative;
-}
-#content .content-left .content-glass img {
-  width: 100%;
-  height: 100%;
-}
-#content .content-left .content-glass .sf {
-  display: none;
-  width: 215px;
-  height: 215px;
-  background-color: yellow;
-  opacity: 0.4;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-#content .content-left .content-piclist {
-  width: 430px;
-  height: 78px;
-  margin-top: 14px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-#content .content-left .content-piclist div {
-  width: 74px;
-  height: 74px;
-}
-#content .content-left .content-piclist div img {
-  width: 74px;
-  height: 74px;
-}
-#content .content-left .bf {
-  display: none;
-  width: 430px;
-  height: 430px;
-  position: absolute;
-  left: 450px;
-  top: 0;
-  overflow: hidden;
-}
-#content .content-left .bf img {
-  display: block;
-  width: 860px;
-  height: 860px;
-  position: absolute;
-}
-#content .content-right {
-  width: 620px;
-  height: 525px;
-}
-
-#titile {
   width: 1090px;
-  padding: 20px 0;
+  margin-top: 50px;
 }
-
-.content-right h3 {
-  font-size: 20px;
-  color: #333;
-  margin-top: 10px;
+#car .car_title {
+  width: 1090px;
+  height: 45px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #f5f5f5;
+  padding-left: 20px;
 }
-
-.content-right-title {
-  font-size: 14px;
-  color: #999;
-  margin-bottom: 10px;
+#car .car_title span:nth-of-type(1) {
+  margin-left: 20px;
 }
-
-.content-right-main {
-  width: 620px;
-  height: 250px;
-  background-color: #f5f3ef;
-  padding: 0 10px;
+#car .car_title span:nth-of-type(2) {
+  margin-left: 60px;
 }
-.content-right-main .price span:nth-of-type(1) {
-  font-size: 13px;
-  color: #666;
-  margin-right: 30px;
+#car .car_title span:nth-of-type(3) {
+  margin-left: 600px;
 }
-.content-right-main .price span:nth-of-type(2) {
-  font-size: 28px;
-  color: #d7282d;
-  font-weight: 900;
-  margin-right: 10px;
+#car .car_title span:nth-of-type(4) {
+  margin-left: 50px;
 }
-.content-right-main del {
-  font-size: 12px;
-  color: #999;
+#car .car_title span:nth-of-type(5) {
+  margin-left: 50px;
 }
-
-.content-right-main > p:nth-of-type(2) {
-  margin: 10px 0;
+#car .car_title span:nth-of-type(6) {
+  margin-left: 50px;
 }
-.content-right-main > p:nth-of-type(2) span {
-  font-size: 13px;
-  color: #666;
-  margin-right: 30px;
-}
-
-.content-right-main > p:nth-of-type(3) {
-  margin: 10px 0;
-}
-.content-right-main > p:nth-of-type(3) span {
-  font-size: 13px;
-  color: #666;
-  margin-right: 30px;
-}
-
-.content-right-main > p:nth-of-type(4) {
-  margin: 10px 0;
-}
-.content-right-main > p:nth-of-type(4) span {
-  font-size: 13px;
-  color: #666;
-  margin-right: 30px;
-}
-
-#content .count {
-  margin: 30px 0;
+#car .car_foot {
+  width: 1090px;
+  height: 70px;
+  background-color: #f5f5f5;
+  padding-left: 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-#content .count .count_title {
-  font-size: 16px;
-  color: #666;
-  margin-right: 30px;
-}
-#content .count input {
+#car .car_foot span:nth-of-type(1) {
+  margin-left: 20px;
   width: 50px;
-  height: 30px;
-  outline: none;
-  text-align: center;
 }
-#content .count .count_add {
-  width: 25px;
-  height: 32px;
-  text-align: center;
-  line-height: 30px;
-  font-size: 20px;
-  border: 1px solid black;
-  border-right: none;
-  cursor: pointer;
+#car .car_foot span:nth-of-type(2) {
+  width: 100px;
+  margin-left: 50px;
 }
-#content .count .count_edd {
-  width: 25px;
-  height: 32px;
-  text-align: center;
-  line-height: 30px;
-  font-size: 20px;
-  border: 1px solid black;
-  border-left: none;
-  cursor: pointer;
+#car .car_foot span:nth-of-type(3) {
+  width: 100px;
+  margin-left: 50px;
+  width: 120px;
 }
-
-#content .buy {
+#car .car_foot div:nth-of-type(1) {
+  margin-left: 150px;
+  width: 100px;
+  color: #999;
+}
+#car .car_foot div:nth-of-type(2) {
+  color: #999;
+  width: 50px;
+}
+#car .car_foot div:nth-of-type(3) {
+  width: 150px;
+  margin-left: 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-#content .buy .buy_1 {
-  width: 168px;
-  height: 50px;
-  text-align: center;
-  line-height: 50px;
-  background-color: #f5f3ef;
-  border: 1px solid #999;
-  margin-right: 30px;
-  font-size: 18px;
-  color: #b4a078;
-}
-#content .buy .buy_2 {
-  width: 168px;
-  height: 50px;
-  text-align: center;
-  line-height: 50px;
+#car .car_foot div:nth-of-type(4) {
+  margin-right: 0;
   background-color: #b4a078;
-  border: 1px solid #b4a078;
-  margin-right: 30px;
-  font-size: 18px;
-  color: #fff;
+  width: 140px;
+  height: 70px;
+  text-align: center;
+  line-height: 70px;
+}
+#car .car_main {
+  width: 1090px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#car .car_main .car_main_pro {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px 0;
+}
+#car .car_main .car_main_pro .num {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 30px;
+}
+#car .car_main .car_main_pro .num input {
+  width: 28px;
+  height: 24px;
+  outline: none;
+}
+#car .car_main .car_main_pro .num div {
+  width: 20px;
+  height: 26px;
+  border: 1px solid black;
+  text-align: center;
+  line-height: 26px;
+}
+#car .car_main .car_main_pro .num div:nth-of-type(1) {
+  border-right: none;
+}
+#car .car_main .car_main_pro .num div:nth-of-type(2) {
+  border-left: none;
+}
+#car .car_main .car_main_pro img {
+  width: 98px;
+  height: 98px;
+  margin-left: 10px;
+}
+#car .car_main .car_main_pro p:nth-of-type(2) {
+  margin-left: 470px;
+}
+#car .car_main .car_main_pro p:nth-of-type(3) {
+  margin-left: 20px;
+}
+#car .car_main .car_main_pro span:nth-of-type(1) {
+  margin-left: 25px;
+  width: 70px;
+}
+
+#product_title_fankui {
+  width: 100%;
+  height: 300px;
+  padding: 60px 0 35px 0;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+#product_title_fankui ul {
+  width: 1090px;
+  height: 204px;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#product_title_fankui ul li {
+  list-style: none;
+  width: 360px;
+  height: 204px;
+  border-right: 1px solid #999;
+  text-align: center;
+}
+#product_title_fankui ul .product_title_fankui_1 p {
+  margin-bottom: 28px;
+}
+#product_title_fankui ul .product_title_fankui_1 .product_title_fankui_1_box {
+  width: 250px;
+  height: 100px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+#product_title_fankui ul .product_title_fankui_1 .product_title_fankui_1_box div {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 1px solid #E8E8E8;
+}
+#product_title_fankui ul .product_title_fankui_1 .product_title_fankui_1_box span {
+  display: block !important;
+  font-size: 40px;
+}
+#product_title_fankui ul .product_title_fankui_1 .product_title_fankui_1_box p {
+  margin: 0;
+  font-size: 12px;
+  color: #333;
+}
+#product_title_fankui ul .product_title_fankui_2 {
+  padding: 0 37px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#product_title_fankui ul .product_title_fankui_2 span {
+  font-size: 20px;
+}
+#product_title_fankui ul .product_title_fankui_3 {
+  padding: 0 37px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#product_title_fankui ul .product_title_fankui_3 p:last-of-type {
+  font-size: 12px;
+  color: #b4a048;
+}
+#product_title_fankui ul li:last-of-type {
+  border-right: none;
 }
 
 footer {
@@ -490,4 +502,4 @@ footer .footer_b p {
   margin: 10px;
 }
 
-/*# sourceMappingURL=detail.css.map */
+/*# sourceMappingURL=carcar.css.map */

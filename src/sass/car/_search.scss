@@ -3,6 +3,7 @@
     height: $search-height;
     background-color: $search-backgoundColor;
     @include displayflex(flex, column, center);
+    justify-content: space-around;
     position: relative;
     .search_buttom {
         @include productbox(1090px, 24px);
@@ -12,6 +13,7 @@
             width: calc(1090px /11);
             font-weight: 900;
             @include font(14px, #000);
+            text-align: center;
         }
     }
     .search_top {
@@ -89,12 +91,8 @@
             position: absolute;
             right: 0;
             top: 30px;
-            text-decoration: none !important;
             @include font(14px, $yel);
             @include center(center, 38px);
-            span {
-                font-size: 14px !important;
-            }
         }
     }
 }
@@ -103,13 +101,13 @@
     @include displayflex(flex, row, center);
     position: absolute;
     left: 200px;
-    top: 140px;
+    top: 136px;
     background-color: #fff;
-    z-index: 1;
-    padding: 14px 20px 20px 20px;
+    padding: 0 20px 20px 20px;
     visibility: hidden;
     width: 1224px;
     height: 402px;
+    z-index: 2;
     ul {
         list-style: none;
         width: 124px !important;
@@ -131,10 +129,25 @@
                 @include font(12px, #333);
                 font-weight: normal;
             }
+            a {
+                text-decoration: none;
+                cursor: pointer;
+                @include font(12px, #333)
+            }
+        }
+        li:nth-of-type(1) {
+            width: 30px;
+            padding: 10px 0;
+            border-bottom: 1px solid #333;
+            text-align: left;
         }
     }
 }
 
 .search_buttom li:hover div {
-    visibility: visible;
+    visibility: visible !important;
+}
+
+.search_buttom>li:hover {
+    border-bottom: 3px solid #CC9756;
 }

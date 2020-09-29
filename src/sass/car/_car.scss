@@ -1,0 +1,120 @@
+@charset "utf-8";
+#car {
+    @include displayflex(flex, column, center);
+    justify-content: space-between;
+    width: 1090px;
+    margin-top: 50px;
+    .car_title {
+        width: 1090px;
+        height: 45px;
+        @include displayflex(flex, row, center);
+        background-color: #f5f5f5;
+        padding-left: 20px;
+        span:nth-of-type(1) {
+            margin-left: 20px;
+        }
+        span:nth-of-type(2) {
+            margin-left: 60px;
+        }
+        span:nth-of-type(3) {
+            margin-left: 600px;
+        }
+        span:nth-of-type(4) {
+            margin-left: 50px;
+        }
+        span:nth-of-type(5) {
+            margin-left: 50px;
+        }
+        span:nth-of-type(6) {
+            margin-left: 50px;
+        }
+    }
+    .car_foot {
+        width: 1090px;
+        height: 70px;
+        background-color: #f5f5f5;
+        padding-left: 20px;
+        @include displayflex(flex, row, center);
+        span:nth-of-type(1) {
+            margin-left: 20px;
+            width: 50px;
+        }
+        span:nth-of-type(2) {
+            width: 100px;
+            margin-left: 50px;
+        }
+        span:nth-of-type(3) {
+            width: 100px;
+            margin-left: 50px;
+            width: 120px;
+        }
+        div:nth-of-type(1) {
+            margin-left: 150px;
+            width: 100px;
+            color: #999;
+        }
+        div:nth-of-type(2) {
+            // margin-left: 10px;
+            color: #999;
+            width: 50px;
+        }
+        div:nth-of-type(3) {
+            width: 150px;
+            margin-left: 10px;
+            @include displayflex(flex, row, center);
+        }
+        div:nth-of-type(4) {
+            margin-right: 0;
+            background-color: #b4a078;
+            width: 140px;
+            height: 70px;
+            text-align: center;
+            line-height: 70px;
+        }
+    }
+    .car_main {
+        width: 1090px;
+        @include displayflex(flex, column, center);
+        .car_main_pro {
+            @include displayflex(flex, row, center);
+            margin: 10px 0;
+            .num {
+                @include displayflex(flex, row, center);
+                margin-left: 30px;
+                input {
+                    width: 28px;
+                    height: 24px;
+                    outline: none;
+                }
+                div {
+                    width: 20px;
+                    height: 26px;
+                    border: 1px solid black;
+                    text-align: center;
+                    line-height: 26px;
+                }
+                div:nth-of-type(1) {
+                    border-right: none;
+                }
+                div:nth-of-type(2) {
+                    border-left: none;
+                }
+            }
+            img {
+                width: 98px;
+                height: 98px;
+                margin-left: 10px;
+            }
+            p:nth-of-type(2) {
+                margin-left: 470px;
+            }
+            p:nth-of-type(3) {
+                margin-left: 20px;
+            }
+            span:nth-of-type(1) {
+                margin-left: 25px;
+                width: 70px;
+            }
+        }
+    }
+}

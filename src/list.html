@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="./css/list/list.css">
 
     <link rel="stylesheet" href="./font/index_font/font_2099880_twfs5zl1cjb/iconfont.css">
+    <script src="script/require.js" defer async="true" data-main="script/main.js" id="currentpage" data-page="listmoudel"></script>
+    <link rel="stylesheet" href="./css/list/pagination.css">
 </head>
 
 <body>
@@ -362,8 +364,8 @@
             <div class="product_titile_paixu">
                 <div class="product_titile_paixu_1">排序</div>
                 <div class="product_titile_paixu_2">
-                    <a href="javascript:;">默认</a>
-                    <a href="javascript:;">价格排序</a>
+                    <a href="javascript:;" class="morenpx">默认</a>
+                    <a href="javascript:;" class="jaigepx">价格排序</a>
                     <a href="javascript:;">上架时间</a>
                 </div>
             </div>
@@ -372,87 +374,12 @@
     </div>
     <div id="content">
         <ul>
-            <li>
-                <div class="content_pic">
-                    <img src="https://yanxuan-item.nosdn.127.net/f1562e59b3a556f076885336dc0d5894.png?type=webp&quality=95&thumbnail=245x245&imageView" alt="">
-                </div>
-                <p class="content_pic_biaoqina">新人特价</p>
-                <p class="content_pic_title">睡眠奢侈品，100支奢密贡缎匹马棉四件套</p>
-                <p class="content_pic_price">
-                    <span class="np">￥1099</span>
-                    <del class="op">￥1399</del>
-                </p>
-                <hr>
-                <p class="content_pic_js">撑腰护颈，舒适就坐一整天</p>
-            </li>
-            <li>
-                <div class="content_pic">
-                    <img src="https://yanxuan-item.nosdn.127.net/f1562e59b3a556f076885336dc0d5894.png?type=webp&quality=95&thumbnail=245x245&imageView" alt="">
-                </div>
-                <p class="content_pic_biaoqina">新人特价</p>
-                <p class="content_pic_title">睡眠奢侈品，100支奢密贡缎匹马棉四件套</p>
-                <p class="content_pic_price">
-                    <span class="np">￥1099</span>
-                    <del class="op">￥1399</del>
-                </p>
-                <hr>
-                <p class="content_pic_js">撑腰护颈，舒适就坐一整天</p>
-            </li>
-            <li>
-                <div class="content_pic">
-                    <img src="https://yanxuan-item.nosdn.127.net/f1562e59b3a556f076885336dc0d5894.png?type=webp&quality=95&thumbnail=245x245&imageView" alt="">
-                </div>
-                <p class="content_pic_biaoqina">新人特价</p>
-                <p class="content_pic_title">睡眠奢侈品，100支奢密贡缎匹马棉四件套</p>
-                <p class="content_pic_price">
-                    <span class="np">￥1099</span>
-                    <del class="op">￥1399</del>
-                </p>
-                <hr>
-                <p class="content_pic_js">撑腰护颈，舒适就坐一整天</p>
-            </li>
-            <li>
-                <div class="content_pic">
-                    <img src="https://yanxuan-item.nosdn.127.net/f1562e59b3a556f076885336dc0d5894.png?type=webp&quality=95&thumbnail=245x245&imageView" alt="">
-                </div>
-                <p class="content_pic_biaoqina">新人特价</p>
-                <p class="content_pic_title">睡眠奢侈品，100支奢密贡缎匹马棉四件套</p>
-                <p class="content_pic_price">
-                    <span class="np">￥1099</span>
-                    <del class="op">￥1399</del>
-                </p>
-                <hr>
-                <p class="content_pic_js">撑腰护颈，舒适就坐一整天</p>
-            </li>
-
-            <li>
-                <div class="content_pic">
-                    <img src="https://yanxuan-item.nosdn.127.net/f1562e59b3a556f076885336dc0d5894.png?type=webp&quality=95&thumbnail=245x245&imageView" alt="">
-                </div>
-                <p class="content_pic_biaoqina">新人特价</p>
-                <p class="content_pic_title">睡眠奢侈品，100支奢密贡缎匹马棉四件套</p>
-                <p class="content_pic_price">
-                    <span class="np">￥1099</span>
-                    <del class="op">￥1399</del>
-                </p>
-                <hr>
-                <p class="content_pic_js">撑腰护颈，舒适就坐一整天</p>
-            </li>
-            <li>
-                <div class="content_pic">
-                    <img src="https://yanxuan-item.nosdn.127.net/f1562e59b3a556f076885336dc0d5894.png?type=webp&quality=95&thumbnail=245x245&imageView" alt="">
-                </div>
-                <p class="content_pic_biaoqina">新人特价</p>
-                <p class="content_pic_title">睡眠奢侈品，100支奢密贡缎匹马棉四件套</p>
-                <p class="content_pic_price">
-                    <span class="np">￥1099</span>
-                    <del class="op">￥1399</del>
-                </p>
-                <hr>
-                <p class="content_pic_js">撑腰护颈，舒适就坐一整天</p>
-            </li>
 
         </ul>
+    </div>
+    <div class="pagelist">
+        <div class="m-style page">
+        </div>
     </div>
     <!-- 左侧导航栏 -->
     <ul id="left_nav">
@@ -541,7 +468,7 @@
                 "></span>
             <p>在线客服</p>
         </li>
-        <li>
+        <li class="right_nav_last" style="display: none;">
             <span class="iconfont icon-xialakuang"></span>
             <p>回到顶部</p>
         </li>
@@ -584,6 +511,7 @@
             </li>
         </ul>
     </div>
+
     <footer>
         <ul class="footer_t">
             <li>
