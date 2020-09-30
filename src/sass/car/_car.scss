@@ -60,11 +60,11 @@
         }
         div:nth-of-type(3) {
             width: 150px;
-            margin-left: 10px;
+            margin-left: 70px;
             @include displayflex(flex, row, center);
         }
         div:nth-of-type(4) {
-            margin-right: 0;
+            margin-left: 100px;
             background-color: #b4a078;
             width: 140px;
             height: 70px;
@@ -105,15 +105,17 @@
                 height: 98px;
                 margin-left: 10px;
             }
-            p:nth-of-type(2) {
+            .price {
+                width: 80px !important;
                 margin-left: 470px;
             }
             p:nth-of-type(3) {
                 margin-left: 20px;
             }
-            span:nth-of-type(1) {
+            .remove {
                 margin-left: 25px;
                 width: 70px;
+                text-align: right;
             }
         }
     }

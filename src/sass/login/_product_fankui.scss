@@ -1,0 +1,68 @@
+@charset "utf-8";
+#product_title_fankui {
+    @include productbox(100%, 300px);
+    padding: 60px 0 35px 0;
+    background-color: #fff;
+    @include displayflex(flex, row, center);
+    justify-content: center;
+    ul {
+        width: 1090px;
+        height: 204px;
+        padding: 0;
+        @include displayflex(flex, row, center);
+        li {
+            list-style: none;
+            width: 360px;
+            height: 204px;
+            border-right: 1px solid #999;
+            text-align: center;
+        }
+        .product_title_fankui_1 {
+            p {
+                margin-bottom: 28px;
+            }
+            .product_title_fankui_1_box {
+                width: 250px;
+                height: 100px;
+                margin: auto;
+                ;
+                @include displayflex(flex, row, center);
+                justify-content: space-between;
+                div {
+                    width: 100px;
+                    height: 100px;
+                    @include displayflex(flex, column, center);
+                    justify-content: space-evenly;
+                    border: 1px solid #E8E8E8;
+                }
+                span {
+                    display: block !important;
+                    font-size: 40px;
+                }
+                p {
+                    margin: 0;
+                    @include font(12px, #333)
+                }
+            }
+        }
+        .product_title_fankui_2 {
+            padding: 0 37px;
+            @include displayflex(flex, column, center);
+            justify-content: space-evenly;
+            span {
+                font-size: 20px;
+            }
+        }
+        .product_title_fankui_3 {
+            padding: 0 37px;
+            @include displayflex(flex, column, center);
+            justify-content: space-evenly;
+            p:last-of-type {
+                @include font(12px, #b4a048)
+            }
+        }
+        li:last-of-type {
+            border-right: none;
+        }
+    }
+}

@@ -1,0 +1,152 @@
+#search {
+    width: 100%;
+    height: $search-height;
+    background-color: $search-backgoundColor;
+    @include displayflex(flex, column, center);
+    justify-content: space-around;
+    position: relative;
+    .search_buttom {
+        @include productbox(1090px, 24px);
+        @include displayflex(flex, row, center);
+        list-style: none;
+        li {
+            width: calc(1090px /11);
+            font-weight: 900;
+            @include font(14px, #000);
+            text-align: center;
+        }
+    }
+    .search_top {
+        @include productbox(1090px, 110px);
+        // @include displayflex(flex, row, center);
+        // justify-content: space-around;
+        position: relative;
+        .search_top_search {
+            width: 532px;
+            height: 36px;
+            border-radius: 18px;
+            border: 1px solid $yel;
+            position: relative;
+            position: absolute;
+            right: 184px;
+            top: 30px;
+            div {
+                width: 90px;
+                height: 37px;
+                background-color: $yel;
+                float: left;
+                position: absolute;
+                top: 0;
+                right: -1px;
+                // border-radius: 18px;
+                border-top-right-radius: 18px;
+                border-bottom-right-radius: 18px;
+                @include font(16px, #fff);
+                @include center(center, 37px)
+            }
+            input {
+                display: inline-block;
+                background: none;
+                outline: none;
+                border: none;
+                width: calc(532px - 90) !important;
+                height: 36px;
+                border: none;
+                position: absolute;
+                top: 0;
+                left: 30px;
+                border-top-left-radius: 18px;
+                border-bottom-left-radius: 18px;
+            }
+            span {
+                position: absolute;
+                left: 10px;
+                top: 12px;
+                @include font(14px, #999);
+            }
+        }
+        div {
+            position: absolute;
+            right: 480px;
+            top: 70px;
+            @include font(12px, #999);
+            a {
+                margin-right: 10px;
+                text-decoration: none;
+                @include font(12px, #999);
+            }
+        }
+        img {
+            width: 210px;
+            height: 60px;
+            position: absolute;
+            left: 0;
+            top: 20px;
+        }
+        .search_top_car {
+            width: 134px;
+            height: 38px;
+            border: 1px solid $yel;
+            border-radius: 19px;
+            position: absolute;
+            right: 0;
+            top: 30px;
+            @include font(14px, $yel);
+            @include center(center, 38px);
+        }
+    }
+}
+
+.search_buttom li div {
+    @include displayflex(flex, row, center);
+    position: absolute;
+    left: 200px;
+    top: 136px;
+    background-color: #fff;
+    padding: 0 20px 20px 20px;
+    visibility: hidden;
+    width: 1224px;
+    height: 402px;
+    z-index: 2;
+    ul {
+        list-style: none;
+        width: 124px !important;
+        height: 368px;
+        // background-color: rosybrown;
+        margin-right: 24px;
+        // @include displayflex(flex, column, center);
+        // justify-content: space-around;
+        li {
+            list-style: none;
+            @include displayflex(flex, row, center);
+            justify-content: space-evenly;
+            margin: 5px 0;
+            img {
+                width: 50px;
+                height: 50px;
+            }
+            p {
+                @include font(12px, #333);
+                font-weight: normal;
+            }
+            a {
+                text-decoration: none;
+                cursor: pointer;
+                @include font(12px, #333)
+            }
+        }
+        li:nth-of-type(1) {
+            width: 30px;
+            padding: 10px 0;
+            border-bottom: 1px solid #333;
+            text-align: left;
+        }
+    }
+}
+
+// .search_buttom li:hover div {
+//     visibility: visible !important;
+// }
+.search_buttom>li:hover {
+    border-bottom: 3px solid #CC9756;
+}

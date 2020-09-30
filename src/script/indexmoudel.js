@@ -303,13 +303,13 @@ define(['jquery', 'jcookie', 'jlazyload'], function() {
             bannerXG: ! function() {
                 let banner = $("#banner")
                 let pic = $("#banner img")
-                let num = null
+                let num = 0
                 let timer = null
                 let ul = $("#banner ul")
                 let li = $("#banner ul li")
                 li.each(function(index, value) {
                     $(value).attr("sid", index)
-                    $(value).attr("class", "")
+                        //  $(value).attr("class", "")
                     $(value).on("mouseover", () => {
                         li.removeClass()
                         $(this).attr("class", "over")
@@ -326,9 +326,9 @@ define(['jquery', 'jcookie', 'jlazyload'], function() {
 
                 //自动滚动
                 timer = setInterval(function() {
+                        num++
                         if (num > 6) {
                             num = 0
-
                         }
                         pic.attr("class", "")
                         pic.eq(num).stop(true).animate({
@@ -337,8 +337,6 @@ define(['jquery', 'jcookie', 'jlazyload'], function() {
                             opacity: 0,
                         })
                         li.eq(num).attr("class", "over").siblings().removeClass()
-
-                        num++
                     }, 2000)
                     //鼠标移入
                 banner.on("mouseover", function() {
@@ -367,10 +365,12 @@ define(['jquery', 'jcookie', 'jlazyload'], function() {
                     //右按钮移入
                 rightbtn.on("mouseover", function() {
                     rightbtn.css({
-                        backgroud: "#E2C199",
+
+                        backgroudColor: "#E2C199",
                     })
-                    console.log(1)
+                    clearInterval(timer)
                 })
+
                 rightbtn.on("click", function() {
                     num++
                     if (num > 6) {
@@ -394,6 +394,7 @@ define(['jquery', 'jcookie', 'jlazyload'], function() {
                         "backgroudColor": "#E2C199",
 
                     })
+                    clearInterval(timer)
                 })
                 leftbtn.on("click", function() {
                     num--

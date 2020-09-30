@@ -234,147 +234,39 @@ header .head-main .icon-xialakuang {
   text-align: left;
 }
 
-.search_buttom li:hover div {
-  visibility: visible !important;
-}
-
 .search_buttom > li:hover {
   border-bottom: 3px solid #CC9756;
 }
 
-#car {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  width: 1090px;
+#content {
+  width: 100%;
+  height: 600px;
+  background: url("//yanxuan.nosdn.127.net/6c20940c7b36612b0ed4d7b0a8a4aafe.jpg");
+  background-position-x: -250px;
+  margin: 50px auto 0;
+  text-align: center;
+  position: relative;
+}
+#content fieldset {
+  width: 400px;
+  height: 400px;
+  background-color: white;
+  position: absolute;
+  padding: 10px;
+  top: 50px;
+  right: 150px;
+}
+#content fieldset form {
   margin-top: 50px;
+  height: 300px;
 }
-#car .car_title {
-  width: 1090px;
-  height: 45px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  background-color: #f5f5f5;
-  padding-left: 20px;
+#content fieldset form p {
+  height: 50px;
+  line-height: 50px;
 }
-#car .car_title span:nth-of-type(1) {
-  margin-left: 20px;
-}
-#car .car_title span:nth-of-type(2) {
-  margin-left: 60px;
-}
-#car .car_title span:nth-of-type(3) {
-  margin-left: 600px;
-}
-#car .car_title span:nth-of-type(4) {
-  margin-left: 50px;
-}
-#car .car_title span:nth-of-type(5) {
-  margin-left: 50px;
-}
-#car .car_title span:nth-of-type(6) {
-  margin-left: 50px;
-}
-#car .car_foot {
-  width: 1090px;
-  height: 70px;
-  background-color: #f5f5f5;
-  padding-left: 20px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-#car .car_foot span:nth-of-type(1) {
-  margin-left: 20px;
+#content fieldset form p label {
+  display: inline-block;
   width: 50px;
-}
-#car .car_foot span:nth-of-type(2) {
-  width: 100px;
-  margin-left: 50px;
-}
-#car .car_foot span:nth-of-type(3) {
-  width: 100px;
-  margin-left: 50px;
-  width: 120px;
-}
-#car .car_foot div:nth-of-type(1) {
-  margin-left: 150px;
-  width: 100px;
-  color: #999;
-}
-#car .car_foot div:nth-of-type(2) {
-  color: #999;
-  width: 50px;
-}
-#car .car_foot div:nth-of-type(3) {
-  width: 150px;
-  margin-left: 70px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-#car .car_foot div:nth-of-type(4) {
-  margin-left: 100px;
-  background-color: #b4a078;
-  width: 140px;
-  height: 70px;
-  text-align: center;
-  line-height: 70px;
-}
-#car .car_main {
-  width: 1090px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#car .car_main .car_main_pro {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin: 10px 0;
-}
-#car .car_main .car_main_pro .num {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-left: 30px;
-}
-#car .car_main .car_main_pro .num input {
-  width: 28px;
-  height: 24px;
-  outline: none;
-}
-#car .car_main .car_main_pro .num div {
-  width: 20px;
-  height: 26px;
-  border: 1px solid black;
-  text-align: center;
-  line-height: 26px;
-}
-#car .car_main .car_main_pro .num div:nth-of-type(1) {
-  border-right: none;
-}
-#car .car_main .car_main_pro .num div:nth-of-type(2) {
-  border-left: none;
-}
-#car .car_main .car_main_pro img {
-  width: 98px;
-  height: 98px;
-  margin-left: 10px;
-}
-#car .car_main .car_main_pro .price {
-  width: 80px !important;
-  margin-left: 470px;
-}
-#car .car_main .car_main_pro p:nth-of-type(3) {
-  margin-left: 20px;
-}
-#car .car_main .car_main_pro .remove {
-  margin-left: 25px;
-  width: 70px;
-  text-align: right;
 }
 
 #product_title_fankui {
@@ -513,4 +405,4 @@ footer .footer_b p {
   margin: 10px;
 }
 
-/*# sourceMappingURL=carcar.css.map */
+/*# sourceMappingURL=login.css.map */
