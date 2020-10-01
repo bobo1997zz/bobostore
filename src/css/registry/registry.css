@@ -263,10 +263,26 @@ header .head-main .icon-xialakuang {
 #content fieldset form p {
   height: 50px;
   line-height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 #content fieldset form p label {
   display: inline-block;
-  width: 50px;
+  width: 100px;
+  height: 20px;
+  line-height: 20px;
+}
+#content fieldset form p span {
+  width: 100px;
+  height: 20px;
+  font-size: 12px;
+  line-height: 20px;
+  color: red;
+}
+#content fieldset form p .login {
+  margin-left: 30px;
 }
 
 #product_title_fankui {

@@ -1,7 +1,7 @@
 <?php
     include "./conn.php";
-    if(isset($_POST["name"]) || isset($_POST["submit"])){
-        $yname=$_POST["name"];
+    if(isset($_POST["usename"]) || isset($_POST["submit"])){
+        $yname=$_POST["usename"];
         $result = $conn->query("select * from registry where username='$yname'");
         if($result->fetch_assoc()){
             echo false;
@@ -15,9 +15,7 @@
         $name=$_POST["usename"];
         $password=$_POST["password"];
         $email=$_POST["email"];
-        echo  $name;
-        echo  $password;
-        echo  $email;
-        $conn->query("insert registry values(default,'$name',sha1('$password'),'$email',NOW())");
-        header('location:http://192.168.13.29/text/bobostor/bobostore/src/login.html');
+        $phone=$_POST["phone"];
+        $conn->query("insert registry values(default,'$name',sha1('$password'),'$email',NOW(),'$phone')");
+        header('location:http://192.168.1.108/text/bobostor/bobostore/src/login.html');
     };

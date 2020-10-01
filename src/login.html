@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/login/login.css">
+    <script src="script/require.js" defer async="true" data-main="script/main.js" id="currentpage" data-page="loginmoudel"></script>
 
 </head>
 
@@ -273,10 +274,10 @@
     <div id="content">
         <fieldset>
 
-            <form action="http://192.168.13.29/text/bobostor/bobostore/php/zhuce.php" method="POST">
+            <form>
                 <p>
                     <label for="">用户名</label>
-                    <input type="text" name="usename" id="  "><span></span>
+                    <input type="text" name="usename" id="usename"><span></span>
                     <span></span>
                 </p>
                 <p>
@@ -285,7 +286,8 @@
                     <span></span>
                 </p>
                 <p>
-                    <input type="submit" name="submit" id="submit" value="登录">
+                    <input type="button" name="button" id="button" value="登录">
+                    <a href="./registry.html" class="registry">注册</a>
                 </p>
 
             </form>

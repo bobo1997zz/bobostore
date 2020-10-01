@@ -10,12 +10,12 @@ define(['jquery', 'jcookie', 'jlazyload', "pagination"], function() {
                 let prices = null
                     //第一次请求ajax
                 $.ajax({
-                        url: "http://192.168.13.29/text/bobostor/bobostore/php/listdata.php",
+                        url: "http://192.168.1.108/text/bobostor/bobostore/php/listdata.php",
                         dataType: "JSON"
                     }).done(function(data) {
                         let str = ""
                         $(data).each(function(index, value) {
-                            str += `<li><a href="http://192.168.13.29/text/bobostor/bobostore/src/detail.html?sid=${value["sid"]}">
+                            str += `<li><a href="http://192.168.1.108/text/bobostor/bobostore/src/detail.html?sid=${value["sid"]}">
                             <div class="content_pic">
                                 <img class="lazy" data-original="${value["url"]}" alt="">
                             </div>
@@ -55,7 +55,7 @@ define(['jquery', 'jcookie', 'jlazyload', "pagination"], function() {
                     callback: function(api) {
                         $.ajax({
                             type: "get",
-                            url: "http://192.168.13.29/text/bobostor/bobostore/php/listdata.php",
+                            url: "http://192.168.1.108/text/bobostor/bobostore/php/listdata.php",
                             data: {
                                 page: api.getCurrent()
                             },
@@ -64,7 +64,7 @@ define(['jquery', 'jcookie', 'jlazyload', "pagination"], function() {
 
                             let str = ""
                             $(data).each(function(index, value) {
-                                str += `<li><a href="http://192.168.13.29/text/bobostor/bobostore/src/detail.html?sid=${value["sid"]}">
+                                str += `<li><a href="http://192.168.1.108/text/bobostor/bobostore/src/detail.html?sid=${value["sid"]}">
                                     <div class="content_pic">
                                         <img  src="${value["url"]}" alt="">
                                     </div>

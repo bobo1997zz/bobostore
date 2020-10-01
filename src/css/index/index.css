@@ -68,6 +68,20 @@ header .head-main .head-main-left a:hover {
 header .head-main .icon-xialakuang {
   font-size: 10px !important;
 }
+header .head-main .head-main-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+header .head-main .head-main-right div {
+  text-align: center;
+  margin-top: 5px;
+}
+header .head-main .head-main-right .tuichu {
+  color: red;
+  font-size: 12px;
+}
 
 .head-main-left {
   position: absolute;

@@ -21,9 +21,25 @@
             p {
                 height: 50px;
                 line-height: 50px;
+                @include displayflex(flex,
+                row,
+                center);
+                justify-content: center;
                 label {
                     display: inline-block;
-                    width: 50px;
+                    width: 100px;
+                    height: 20px;
+                    line-height: 20px;
+                }
+                span {
+                    width: 100px;
+                    height: 20px;
+                    font-size: 12px;
+                    line-height: 20px;
+                    color: red,
+                }
+                .login {
+                    margin-left: 30px;
                 }
             }
         }

@@ -45,6 +45,18 @@ header {
         .icon-xialakuang {
             font-size: 10px !important;
         }
+        .head-main-right {
+            @include displayflex(flex, row, center);
+            justify-content: space-around;
+            div {
+                text-align: center;
+                margin-top: 5px;
+            }
+            .tuichu {
+                color: red;
+                font-size: 12px;
+            }
+        }
     }
 }
 

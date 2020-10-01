@@ -5,7 +5,7 @@ define(['jquery', 'jcookie', 'jlazyload'], function() {
             render: ! function() {
                 $.ajax({
                     type: "get",
-                    url: "http://192.168.13.29/text/bobostor/bobostore/php/jieko.php",
+                    url: "http://192.168.1.108/text/bobostor/bobostore/php/jieko.php",
                     dataType: "JSON",
                 }).done(function(data) {
                     //新品板块推荐渲染
@@ -584,7 +584,7 @@ define(['jquery', 'jcookie', 'jlazyload'], function() {
                             $(this).css({
                                 visibility: "visible",
                             })
-                            console.log(this)
+
                         })
 
                         $(value).on("mouseout", function() {
@@ -1889,6 +1889,23 @@ define(['jquery', 'jcookie', 'jlazyload'], function() {
                 setInterval(function() {
                     djs();
                 }, 1000);
+            }();
+            //登入退出效果
+            login: ! function() {
+
+                if ($.cookie("name")) {
+                    $(".uid").show()
+                    $(".noneid").hide()
+                    $(".idname").html($.cookie("name"))
+                } else {
+                    $(".uid").hide()
+                    $(".noneid").show()
+                }
+                $(".tuichu").on("click", function() {
+                    $(".uid").hide()
+                    $(".noneid").show()
+                    $.cookie("name", null, { expires: -1 })
+                })
             }();
 
         }

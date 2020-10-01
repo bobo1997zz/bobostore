@@ -273,15 +273,19 @@
     <div id="content">
         <fieldset>
 
-            <form action="http://192.168.13.29/text/bobostor/bobostore/php/zhuce.php" method="POST">
+            <form action="http://192.168.1.108/text/bobostor/bobostore/php/zhuce.php" method="POST">
                 <p>
                     <label for="">用户名</label>
-                    <input type="text" name="usename" id="  "><span></span>
-                    <span></span>
+                    <input type="text" name="usename" id="usename"><span></span>
                 </p>
                 <p>
                     <label for="">密码</label>
                     <input type="password" name="password" id="password">
+                    <span></span>
+                </p>
+                <p>
+                    <label for="">再次输入密码</label>
+                    <input type="password" name="passwordagn" id="passwordagn">
                     <span></span>
                 </p>
                 <p>
@@ -296,6 +300,7 @@
                 </p>
                 <p>
                     <input type="submit" name="submit" id="submit" value="注册">
+                    <a href="./login.html" class="login">登入</a>
                 </p>
 
             </form>
