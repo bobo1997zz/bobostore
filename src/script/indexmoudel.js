@@ -32,16 +32,16 @@ define(['jquery', 'jcookie', 'jlazyload'], function() {
                         })
                         $("#product_title_new .new-pro").html(str_new)
                             //人气推荐板块渲染
-                        let str_recommend = ` <img class="lazy" data-original="${data[18]["url"]}" alt="" class="active">
+                        let str_recommend = ` <img class="lazy" data-original="${data[1]["url"]}" alt="" class="active">
                        <p class="recommend-pro-p1">新品尝鲜</p>
-                       <p class="recommend-pro-p2">${data[18]["title"]}</p>
+                       <p class="recommend-pro-p2">${data[1]["title"]}</p>
                        <p class="recommend-pro-p3">
-                           <span class="recommend-pro-p3-span1" style="color:red;">￥${data[18]["price"]}</span>
-                           <del class="recommend-pro-p3-span2">￥${data[18]["oldprice"]}</del>
+                           <span class="recommend-pro-p3-span1" style="color:red;">￥${data[1]["price"]}</span>
+                           <del class="recommend-pro-p3-span2">￥${data[1]["oldprice"]}</del>
                        </p>`
                         $(".recommend-pro-left").html(str_recommend)
                         let str_recommend_right = ""
-                        for (let a = 10; a <= 15; a++) {
+                        for (let a = 29; a <= 34; a++) {
                             str_recommend_right += `<li>
                             <img class="lazy active" data-original="${data[a]["url"]}" alt="" >
                             <p class="recommend-pro-p1">新品尝鲜</p>
@@ -55,7 +55,7 @@ define(['jquery', 'jcookie', 'jlazyload'], function() {
                         $(".recommend-pro-right").html(str_recommend_right)
                             //限时购板块渲染
                         let str_limit = ""
-                        for (let a = 11; a <= 14; a++) {
+                        for (let a = 0; a <= 3; a++) {
                             str_limit += `<div>
                             <div class="limit_pro_center-pro-1">
                             <img class="lazy" data-original="${data[a]["url"]}"  alt="">
@@ -284,20 +284,37 @@ define(['jquery', 'jcookie', 'jlazyload'], function() {
                 let num = null
                 let ul = $(".head-main-left")
                 timer = setInterval(function() {
-                    num++
-                    if (num > 3) {
-                        num = 1
-                        ul[0].style.marginTop = "0px"
-                    }
-                    ul.animate({
-                        marginTop: -36 * num,
-                    })
+                        num++
+                        if (num > 3) {
+                            num = 1
+                            ul[0].style.marginTop = "0px"
+                        }
+                        ul.animate({
+                            marginTop: -36 * num,
+                        })
 
 
 
 
 
-                }, 2000)
+                    }, 2000)
+                    //app图片显示
+                $(".head_app").on("mouseover", function() {
+                    $(".head-erweima").show()
+                    $(".head_shanjiao").show()
+                })
+                $(".head_app").on("mouseout", function() {
+                    $(".head-erweima").hide()
+                    $(".head_shanjiao").hide()
+                })
+                $(".head-erweima").on("mouseover", function() {
+                    $(".head-erweima").show()
+                    $(".head_shanjiao").show()
+                })
+                $(".head-erweima").on("mouseout", function() {
+                    $(".head-erweima").hide()
+                    $(".head_shanjiao").hide()
+                })
             }();
             //banner
             bannerXG: ! function() {
@@ -1760,107 +1777,212 @@ define(['jquery', 'jcookie', 'jlazyload'], function() {
             //评价板块效果
             ourtitleXG: ! function() {
                 let num = 0
-                let ul = $(".product_title_our_content")
-                let li = $(".product_title_our_content li")
+                let time = null
+                    //轮播
+                time = setInterval(() => {
+
+                    let li = $(".product_title_our_content li")
+                    let ul = $(".product_title_our_content")
+
+                    ul.append(`<li>${li.eq(num).html()}</li>`)
+                    num++
+
+                    ul.stop(true).animate({
+                        left: -(num * (li.eq(1).outerWidth() + 20)),
+                    })
+
+                }, 2000)
                 let left = $("#product_title_our .btn-left")
                 let right = $("#product_title_our .btn-right")
-                right.on("click", function() {
-                    if (num == 5) {
-                        ul.css({
-                            left: 0,
-                        })
-                        num = 0
-                    }
-                    num++
-
-                    ul.stop(true).animate({
-                        left: -(num * (li.eq(1).outerWidth() + 20)),
-                    })
+                $(".product_title_our_content").on("mouseover", function() {
+                    clearInterval(time)
                 })
-                left.on("click", function() {
-                    if (num == 0) {
-                        num = 1
-                    }
-                    if (num == 1) {
-                        ul.css({
-                            left: "-2645px",
-                        })
-                        num = 5
-                    }
-                    num--
-                    ul.stop(true).animate({
-                        left: -(num * (li.eq(1).outerWidth() + 20)),
-                    })
 
-                })
-                let timer = null
-                timer = setInterval(function() {
-                    if (num == 5) {
-                        ul.css({
-                            left: 0,
-                        })
-                        num = 0
-                    }
-                    num++
+                $(".product_title_our_content").on("mouseout", function() {
+                    time = setInterval(() => {
 
-                    ul.stop(true).animate({
-                        left: -(num * (li.eq(1).outerWidth() + 20)),
-                    })
-                }, 2000)
-                ul.on("mouseover", function() {
-                    clearInterval(timer)
-                })
-                ul.on("mouseout", function() {
-                    timer = setInterval(function() {
-                        if (num == 5) {
-                            ul.css({
-                                left: 0,
-                            })
-                            num = 0
-                        }
+                        let li = $(".product_title_our_content li")
+                        let ul = $(".product_title_our_content")
+
+                        ul.append(`<li>${li.eq(num).html()}</li>`)
                         num++
 
                         ul.stop(true).animate({
                             left: -(num * (li.eq(1).outerWidth() + 20)),
                         })
+
                     }, 2000)
                 })
                 left.on("mouseover", function() {
-                    clearInterval(timer)
+                    clearInterval(time)
+
                 })
                 left.on("mouseout", function() {
-                    timer = setInterval(function() {
-                        if (num == 5) {
-                            ul.css({
-                                left: 0,
-                            })
-                            num = 0
-                        }
+                    time = setInterval(() => {
+
+                        let li = $(".product_title_our_content li")
+                        let ul = $(".product_title_our_content")
+
+                        ul.append(`<li>${li.eq(num).html()}</li>`)
                         num++
 
                         ul.stop(true).animate({
                             left: -(num * (li.eq(1).outerWidth() + 20)),
                         })
+
                     }, 2000)
                 })
                 right.on("mouseover", function() {
-                    clearInterval(timer)
+                    clearInterval(time)
                 })
                 right.on("mouseout", function() {
-                    timer = setInterval(function() {
-                        if (num == 5) {
-                            ul.css({
-                                left: 0,
-                            })
-                            num = 0
-                        }
+                    time = setInterval(() => {
+                        let li = $(".product_title_our_content li")
+                        let ul = $(".product_title_our_content")
+                        ul.append(`<li>${li.eq(num).html()}</li>`)
                         num++
 
                         ul.stop(true).animate({
                             left: -(num * (li.eq(1).outerWidth() + 20)),
                         })
+
                     }, 2000)
                 })
+                right.on("click", function() {
+                    let li = $(".product_title_our_content li")
+                    let ul = $(".product_title_our_content")
+                    ul.append(`<li>${li.eq(num).html()}</li>`)
+                    num++
+
+                    ul.stop(true).animate({
+                        left: -(num * (li.eq(1).outerWidth() + 20)),
+                    })
+
+                })
+                let rightconut = 0
+
+                left.on("click", function() {
+
+                        let ul = $(".product_title_our_content")
+                        let li = $(".product_title_our_content li")
+
+                        num--
+
+                        if (num < 0) {
+                            console.log(ul.position().left)
+                            ul.css({
+                                left: -1890,
+                            })
+                            num = 4
+                        }
+                        ul.stop(true).animate({
+                            left: ul.position().left + (li.eq(1).outerWidth() + 20),
+                        })
+
+                    })
+                    //
+                    // let num = 0
+                    // let ul = $(".product_title_our_content")
+                    // let li = $(".product_title_our_content li")
+                    // let left = $("#product_title_our .btn-left")
+                    // let right = $("#product_title_our .btn-right")
+                    // right.on("click", function() {
+                    //     if (num == 5) {
+                    //         ul.css({
+                    //             left: 0,
+                    //         })
+                    //         num = 0
+                    //     }
+                    //     num++
+
+                //     ul.stop(true).animate({
+                //         left: -(num * (li.eq(1).outerWidth() + 20)),
+                //     })
+                // })
+                // left.on("click", function() {
+                //     if (num == 0) {
+                //         num = 1
+                //     }
+                //     if (num == 1) {
+                //         ul.css({
+                //             left: "-2645px",
+                //         })
+                //         num = 5
+                //     }
+                //     num--
+                //     ul.stop(true).animate({
+                //         left: -(num * (li.eq(1).outerWidth() + 20)),
+                //     })
+
+                // })
+                // let timer = null
+                // timer = setInterval(function() {
+                //     if (num == 5) {
+                //         ul.css({
+                //             left: 0,
+                //         })
+                //         num = 0
+                //     }
+                //     num++
+
+                //     ul.stop(true).animate({
+                //         left: -(num * (li.eq(1).outerWidth() + 20)),
+                //     })
+                // }, 2000)
+                // ul.on("mouseover", function() {
+                //     clearInterval(timer)
+                // })
+                // ul.on("mouseout", function() {
+                //     timer = setInterval(function() {
+                //         if (num == 5) {
+                //             ul.css({
+                //                 left: 0,
+                //             })
+                //             num = 0
+                //         }
+                //         num++
+
+                //         ul.stop(true).animate({
+                //             left: -(num * (li.eq(1).outerWidth() + 20)),
+                //         })
+                //     }, 2000)
+                // })
+                // left.on("mouseover", function() {
+                //     clearInterval(timer)
+                // })
+                // left.on("mouseout", function() {
+                //     timer = setInterval(function() {
+                //         if (num == 5) {
+                //             ul.css({
+                //                 left: 0,
+                //             })
+                //             num = 0
+                //         }
+                //         num++
+
+                //         ul.stop(true).animate({
+                //             left: -(num * (li.eq(1).outerWidth() + 20)),
+                //         })
+                //     }, 2000)
+                // })
+                // right.on("mouseover", function() {
+                //     clearInterval(timer)
+                // })
+                // right.on("mouseout", function() {
+                //     timer = setInterval(function() {
+                //         if (num == 5) {
+                //             ul.css({
+                //                 left: 0,
+                //             })
+                //             num = 0
+                //         }
+                //         num++
+
+                //         ul.stop(true).animate({
+                //             left: -(num * (li.eq(1).outerWidth() + 20)),
+                //         })
+                //     }, 2000)
+                // })
             }();
             //限时购倒计时效果
             limit: ! function() {

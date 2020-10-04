@@ -82,6 +82,12 @@
         background-color: #e2c299;
         @include center(center, 50px);
     }
+    .btn-left:hover {
+        background-color: #B19D79;
+    }
+    .btn-right:hover {
+        background-color: #B19D79;
+    }
 }
 
 .product_title_our_content_pic_pingjia p:nth-of-type(1) {
