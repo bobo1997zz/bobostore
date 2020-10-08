@@ -40,6 +40,7 @@
         width: 425px;
         height: 50%;
         position: relative;
+        padding: 0 3px;
         @include displayflex(flex, row, center);
         .limit_pro_center-pro-2 {
             height: 100%;
@@ -139,4 +140,26 @@
         text-align: center;
         line-height: 30px;
     }
+}
+
+.limit_pro_right>div:nth-of-type(1) {
+    border-top: 1px solid #f0ece4;
+    border-right: 1px solid #f0ece4;
+}
+
+.limit_pro_right>div:nth-of-type(2) {
+    border-top: 1px solid #f0ece4;
+    border-right: 1px solid #f0ece4;
+}
+
+.limit_pro_right>div:nth-of-type(3) {
+    border-top: 1px solid #f0ece4;
+    border-right: 1px solid #f0ece4;
+    border-bottom: 1px solid #f0ece4;
+}
+
+.limit_pro_right>div:nth-of-type(4) {
+    border-top: 1px solid #f0ece4;
+    border-right: 1px solid #f0ece4;
+    border-bottom: 1px solid #f0ece4;
 }

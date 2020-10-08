@@ -1991,7 +1991,7 @@ define(['jquery', 'jcookie', 'jlazyload'], function() {
                 }
 
                 function djs() {
-                    let futuretime = new Date('2020-10-09 20:00:00'); //未来时间
+                    let futuretime = new Date('2020-10-15 20:00:00'); //未来时间
                     let currenttime = new Date(); //当前时间。
                     let time = parseInt((futuretime - currenttime) / 1000); //秒
 
