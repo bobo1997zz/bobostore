@@ -8,7 +8,7 @@ function renderzz() {
         return Number(value)
     })
     $.ajax({
-        url: "http://192.168.1.108/text/bobostor/bobostore/php/jieko.php",
+        url: "http://192.168.13.29/text/bobostor/bobostore/php/jieko.php",
         dataType: "JSON",
     }).done(function(data) {
         let str = ""
@@ -57,7 +57,7 @@ define(['jquery', 'jcookie', 'jlazyload'], function() {
                 let of1 = $(".allfocus1")
                 let of2 = $(".allfocus2")
                 of1.on("change", function() {
-                    console.log(of1.prop("checked"))
+
                     if (of1.prop("checked")) {
                         $(".car_main .pro_of").prop("checked", true)
                     } else {
@@ -78,25 +78,30 @@ define(['jquery', 'jcookie', 'jlazyload'], function() {
 
                 })
                 $(".car_main").on("change", ".pro_of", function() {
-                    console.log($(".car_main .pro_of:checked").size(), $(".car_main .pro_of").size())
-                    if ($(".car_main .pro_of:checked").size() != $(".car_main .pro_of").size()) {
-                        of1.removeAttr("checked")
-                    } else {
-                        of1.attr("checked", true)
-                    }
-                    let allprice = null
-
-                    $(".car_main_pro").each(function(index, valeue) {
-                        if ($(this).find(".pro_of").is(":checked")) {
-                            allprice += parseFloat($(this).find(".allprice").html().substring(1))
+                        // console.log($(".car_main .pro_of:checked").size(), $(".car_main .pro_of").size())
+                        if ($(".car_main .pro_of:checked").size() != $(".car_main .pro_of").size()) {
+                            of1.removeAttr("checked")
+                            console.log(1)
+                        } else {
+                            of1.prop("checked", 1)
+                            console.log(2)
                         }
-                        console.log($(this).find(".allprice").html())
+                        let allprice = null
+
+                        $(".car_main_pro").each(function(index, valeue) {
+                            if ($(this).find(".pro_of").is(":checked")) {
+                                allprice += parseFloat($(this).find(".allprice").html().substring(1))
+                            }
+                            console.log($(this).find(".allprice").html())
+                        })
+
+                        $(".priceall1").html(parseFloat(allprice).toFixed(2))
+                        $(".priceall2").html(parseFloat(allprice).toFixed(2))
+
                     })
-
-                    $(".priceall1").html(parseFloat(allprice).toFixed(2))
-                    $(".priceall2").html(parseFloat(allprice).toFixed(2))
-
-                })
+                    // $(".car_main").on("change", ".pro_of", function() {
+                    //     if()
+                    // })
 
             }();
             //删除和增加数量
@@ -112,12 +117,18 @@ define(['jquery', 'jcookie', 'jlazyload'], function() {
                 $(".car_main").on("click", ".remove", function() {
                         $(this).parents(".car_main_pro").remove()
                         let allprice = null
+                        let resid = Number($(this).parents(".car_main_pro").attr("sid"))
 
+                        let index = sid.indexOf(resid)
+                        sid.splice(index, 1)
+                        num.splice(index, 1)
+                        $.cookie("sidarr", sid, { expires: 7 })
+                        $.cookie("numarr", num, { expires: 7 })
                         $(".car_main_pro").each(function(index, valeue) {
                             if ($(this).find(".pro_of").is(":checked")) {
                                 allprice += parseFloat($(this).find(".allprice").html().substring(1))
                             }
-                            console.log($(this).find(".allprice").html())
+                            // console.log($(this).find(".allprice").html())
                         })
 
                         $(".priceall1").html(parseFloat(allprice).toFixed(2))
@@ -177,6 +188,8 @@ define(['jquery', 'jcookie', 'jlazyload'], function() {
 
                 })
             }();
+
+
 
         }
     }

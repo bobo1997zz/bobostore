@@ -3,7 +3,7 @@
     @include productbox;
     margin-top: 30px;
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
     // 新品标题
     .new-title {
         width: 100%;
@@ -36,10 +36,9 @@
         @include displayflex(flex, flex, center);
         justify-content: space-between;
         margin-top: 10px;
-        overflow: hidden;
+        // overflow: hidden;
         position: absolute;
         left: 0;
-        top: 80px;
         li {
             width: 265px;
             height: 365px;
@@ -95,7 +94,7 @@
     //左右按钮
     .btn-left {
         position: absolute;
-        left: 1030px;
+        left: 1100px;
         top: 230px;
         width: 50px;
         height: 50px;
@@ -111,7 +110,7 @@
         height: 50px;
         border-radius: 50%;
         position: absolute;
-        left: 20px;
+        left: -60px;
         top: 230px;
         @include font(20px, #eee);
         @include center(center, 50px);
@@ -124,5 +123,10 @@
     }
     .btn-right:hover {
         background-color: #CC9756;
+    }
+    .new-pro-b {
+        overflow: hidden;
+        position: relative;
+        height: 365px;
     }
 }

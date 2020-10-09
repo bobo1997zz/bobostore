@@ -17,5 +17,5 @@
         $email=$_POST["email"];
         $phone=$_POST["phone"];
         $conn->query("insert registry values(default,'$name',sha1('$password'),'$email',NOW(),'$phone')");
-        header('location:http://192.168.1.108/text/bobostor/bobostore/src/login.html');
+        header('location:http://192.168.13.29/text/bobostor/bobostore/src/login.html');
     };

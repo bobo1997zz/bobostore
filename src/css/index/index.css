@@ -470,7 +470,6 @@ header .head-main .head-main-right .tuichu {
   height: 510px;
   margin-top: 30px;
   position: relative;
-  overflow: hidden;
 }
 #product_title_new .new-title {
   width: 100%;
@@ -507,10 +506,8 @@ header .head-main .head-main-right .tuichu {
   align-items: center;
   justify-content: space-between;
   margin-top: 10px;
-  overflow: hidden;
   position: absolute;
   left: 0;
-  top: 80px;
 }
 #product_title_new .new-pro li {
   width: 265px;
@@ -565,7 +562,7 @@ header .head-main .head-main-right .tuichu {
 }
 #product_title_new .btn-left {
   position: absolute;
-  left: 1030px;
+  left: 1100px;
   top: 230px;
   width: 50px;
   height: 50px;
@@ -583,7 +580,7 @@ header .head-main .head-main-right .tuichu {
   height: 50px;
   border-radius: 50%;
   position: absolute;
-  left: 20px;
+  left: -60px;
   top: 230px;
   font-size: 20px;
   color: #eee;
@@ -598,6 +595,11 @@ header .head-main .head-main-right .tuichu {
 }
 #product_title_new .btn-right:hover {
   background-color: #CC9756;
+}
+#product_title_new .new-pro-b {
+  overflow: hidden;
+  position: relative;
+  height: 365px;
 }
 
 #product_title_recommend {

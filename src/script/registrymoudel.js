@@ -23,7 +23,7 @@ define(['jquery', 'jcookie', 'jlazyload', "pagination"], function() {
                         if (reg.test($("#usename").val())) {
                             $.ajax({
                                 type: "post",
-                                url: "http://192.168.1.108/text/bobostor/bobostore/php/zhuce.php",
+                                url: "http://192.168.13.29/text/bobostor/bobostore/php/zhuce.php",
                                 data: {
                                     usename: $("#usename").val(),
                                 },
@@ -73,7 +73,7 @@ define(['jquery', 'jcookie', 'jlazyload', "pagination"], function() {
                 })
                 //密码验证
             $("#password").on("focus", function() {
-                $("#password").siblings("span").html("请输入用户名")
+                $("#password").siblings("span").html("请输入密码")
                 $("#password").siblings("span").css({
                     color: "red",
                 })

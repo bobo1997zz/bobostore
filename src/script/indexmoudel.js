@@ -5,7 +5,7 @@ define(['jquery', 'jcookie', 'jlazyload'], function() {
             render: ! function() {
                 $.ajax({
                     type: "get",
-                    url: "http://192.168.1.108/text/bobostor/bobostore/php/jieko.php",
+                    url: "http://192.168.13.29/text/bobostor/bobostore/php/jieko.php",
                     dataType: "JSON",
                 }).done(function(data) {
                     //新品板块推荐渲染

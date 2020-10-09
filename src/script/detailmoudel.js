@@ -8,7 +8,7 @@ define(['jquery', 'jcookie', 'jlazyload'], function() {
                 }
                 $.ajax({
                     type: "get",
-                    url: "http://192.168.1.108/text/bobostor/bobostore/php/getsid.php",
+                    url: "http://192.168.13.29/text/bobostor/bobostore/php/getsid.php",
                     data: {
                         sid: num
                     },
